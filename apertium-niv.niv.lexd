@@ -356,14 +356,14 @@ LEXICON CLITICS
 <itg_pej>:>ӿата      # used with an interrogative word, expresses displeasure/disapproval
 
 LEXICON POSSESSION
-<poss_1sg>:нь>     # 1sg
+<px1sg>:нь>     # 1sg
 
 PATTERNS
 
 NounRoot [<n>:]
 NounRoot [<n>:] CASES
 NounRoot [<n>+:] TVerbRoot [<v><tv>:]    # Incorporation
-POSSESSION NounRoot
+:POSSESSION NounRoot [<n>:] POSSESSION:
 
 LEXICON ProperNounRoot
 Рум:Рум             # dude called Rum

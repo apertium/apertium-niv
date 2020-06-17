@@ -359,9 +359,10 @@ LEXICON POSSESSION
 <poss_1sg>:нь>     # 1sg
 
 PATTERNS
-NounRoot
-NounRoot CASES
-NounRoot TVerbRoot    # Incorporation
+
+NounRoot [<n>:]
+NounRoot [<n>:] CASES
+NounRoot [<n>+:] TVerbRoot [<v><tv>:]    # Incorporation
 POSSESSION NounRoot
 
 LEXICON ProperNounRoot

@@ -72,7 +72,7 @@ Rules
 %{a%}:0 <=> :Vowel (%{f%}:) %>: _ ;
 
 "Remove /u/ after vowel-ending stem"
-%{u%}:0 <=> :Vowel (%{f%}:) %>: _ ;
+%{u%}:0 <=> :Vowel (%{f%}:) (%>:) %>: _ ;
 
 "Remove /i/ after vowel-ending stem"
 %{i%}:0 <=> :Vowel %>: _ ;
@@ -90,36 +90,36 @@ Rules
 %{f%}:0 <=> _ %>: ;
 
 "Set %{и%} to ю before у"
-%{и%}:ю <=> _ %{f%}: %>: [ у: | %{u%}: ] ;
+%{и%}:ю <=> _ (%{f%}:) %>: [ у: | %{u%}: ] ;
 
 "Set %{и%} to е before э"
-%{и%}:е <=> _ %{f%}: %>: э: ;
+%{и%}:е <=> _ (%{f%}:) %>: э: ;
 
 "Set %{и%} to ё before о"
-%{и%}:ё <=> _ %{f%}: %>: о: ;
+%{и%}:ё <=> _ (%{f%}:) %>: о: ;
 
 "Set %{и%} to я before а"
-%{и%}:я <=> _ %{f%}: %>: [ а: | %{a%}: ] ;
+%{и%}:я <=> _ (%{f%}:) %>: [ а: | %{a%}: ] ;
 
 "Set %{и%} to й before ы"
-%{и%}:й <=> _ %{f%}: %>: :ы ;
+%{и%}:й <=> _ (%{f%}:) %>: :ы ;
 
 "Set %{и%} to 0 before и"
-%{и%}:0 <=> _ %{f%}: %>: :и ;
+%{и%}:0 <=> _ (%{f%}:) %>: :и ;
 
 !@ %{и%}:ю %{f%}:0 у:0 м:м г:г у:у
 
 "Delete у after ю"
-у:0 <=> %{и%}:ю %{f%}: %>: _ ;
+у:0 <=> %{и%}:ю (%{f%}:) %>: _ ;
 
 "Delete я after а"
-а:0 <=> %{и%}:я %{f%}: %>: _ ;
+а:0 <=> %{и%}:я (%{f%}:) %>: _ ;
 
 "Delete е after э"
-э:0 <=> %{и%}:е %{f%}: %>: _ ;
+э:0 <=> %{и%}:е (%{f%}:) %>: _ ;
 
 "Delete ё after о"
-о:0 <=> %{и%}:ё %{f%}: %>: _ ;
+о:0 <=> %{и%}:ё (%{f%}:) %>: _ ;
 
 "Remove soft sign archiphoneme in some places"
 %{ь%}:0 <=> [ :з | :З ] _ ;
@@ -157,7 +157,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 "Set /G/ to <ғ> after voiced stops and vowels"
 %{G%}:ғ <=> [ :C | :Vowel ] (ь:) %>: _ ;
 
-"Set /G/ to <г> after sonorants"
+"Set /G/ to <г> after sonorants and in the word нивх"
 %{G%}:г <=> [ :Sonorant | %{х%}: ] %>: _ ;
 
 "Set /G/ to <к> after voiceless fricatives"
@@ -166,7 +166,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 "Set /Г/ to <ғ> after voiced stops"
 %{Г%}:ғ <=> :C (ь:) %>: _ ;
 
-"Set /Г/ to <г> after sonorants and vowels"
+"Set /Г/ to <г> after sonorants and vowels and in the word нивх"
 %{Г%}:г <=> [ :Sonorant | %{х%}: | :Vowel ] %>: _ ;
 
 "Set /Г/ to <к> after voiceless fricatives"

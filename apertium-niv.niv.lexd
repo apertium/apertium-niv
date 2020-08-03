@@ -389,8 +389,8 @@ NounRoot [<n>:] Comp NounRoot2 [<n>:] CLITICS
 :POSSESSION NounRoot [<n>:] POSSESSION: Comp NounRoot2 [<n>:] NUMBER CASES CLITICS
 
 LEXICON ProperNounRoot
-Рум:Рум             # dude called Rum
-Иисус:Иисус         # Jesus
+Рум<ant><m>:Рум         # dude called Rum
+Иисус<ant><m>:Иисус     # Jesus
 
 PATTERNS
 # ProperNounRoot [<np>:]

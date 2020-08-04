@@ -151,7 +151,7 @@
 LEXICON NounRoot
 умгу:умгу           # woman
 ытык:ытык           # father
-ӄан<cl2>:ӄан        # doggo
+ӄан:ӄан             # doggo
 ӈа:ӈа               # animal
 тыф:ты{ф}           # house
 ми:ми               # inside
@@ -332,6 +332,21 @@ LEXICON NounRoot
 ӄʼоӻа:ӄ{ʼ}оӻа       # nature
 утку:утку           # husband
 
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#!!! Definite Sakhalin words !!!
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ
+
+ванивӈ:ванивӈ       # warrior, soldier
+вер̌кинивӈ:вер̌кинивӈ # seller
+вонӈ:вонӈ           # inhabitant, villager
+ёӄо:ёӄо             # Yakut
+ёӄоӈ:ёӄоӈ           # Yakut
+ётнивӈ:ётнивӈ       # tailor
+ётр̌аӈӷ:ётр̌аӈӷ       # seamstress
+иврыр̌аӈӷ:иврыр̌аӈӷ   # cleaner, janitor (female)
+
 ALIAS NounRoot NounRoot2
 
 LEXICON NUMBER
@@ -386,7 +401,7 @@ Possession Comp NounRoot2 [<n>:]
 PATTERNS
 NounStem NUMBER CASES
 NounStem NUMBER CASES CLITICS
-# NounRoot [<n>+:] TVerbRoot [<v><tv>:]    # Incorporation
+NounRoot [<n>:] Comp TVerbRoot [<v><tv>:]    # Incorporation
 NounRoot [<n>:] Comp NounRoot2 [<n>:]
 NounRoot [<n>:] Comp NounRoot2 [<n>:] CLITICS
 
@@ -433,50 +448,52 @@ LEXICON DeterminerRoot
 
 PATTERNS
 PronounStem CASES CLITICS
-DeterminerRoot Comp NounRoot [<n>:]
+DeterminerRoot [<det><dem>:] Comp NounRoot [<n>:]
 
-# Numbers don't work right now #
+# Numbers don't work right now
 
 LEXICON NumeralRoot      # Sakhalin numbers
-ненӈ<num><cl1>:ненӈ    # one person
-ненӈ<num><cl2>:нян     # one animal/fish
-ненӈ<num><cl3>:няӄр̌    # one object
+ненӈ<num><cl1>:ненӈ    # one person             yes
+ненӈ<num><cl2>:нян     # one animal/fish        yes
+ненӈ<num><cl3>:няӄр̌    # one object             no
 
-менӈ<num><cl1>:менӈ      # two people
-менӈ<num><cl2>:мар̌      # two animals
-менӈ<num><cl2>:мор̌      # DIR/LR two animals
-менӈ<num><cl3>:меӄр̌      # two objects
+менӈ<num><cl1>:менӈ      # two people           yes
+менӈ<num><cl2>:мар̌      # two animals           no
+менӈ<num><cl2>:мор̌      # DIR/LR two animals    no
+менӈ<num><cl3>:меӄр̌      # two objects          no
 
-тяӄр̌<num><cl1>:тяӄр̌      # three people
-тяӄр̌<num><cl2>:тёр̌      # three animals
-тяӄр̌<num><cl3>:тяӄр̌      # three objects
+тяӄр̌<num><cl1>:тяӄр̌      # three people         no
+тяӄр̌<num><cl2>:тёр̌      # three animals         no
+тяӄр̌<num><cl3>:тяӄр̌      # three objects        no
 
-нырӈ<num><cl1>:нырӈ      # four people
-нырӈ<num><cl2>:нур̌      # four animals
-нырӈ<num><cl3>:ныкр̌      # four objects
+нырӈ<num><cl1>:нырӈ      # four people          yes
+нырӈ<num><cl2>:нур̌      # four animals          no
+нырӈ<num><cl3>:ныкр̌      # four objects         no
 
-тʼорӈ<num><cl1>:тʼорӈ    # five people
-тʼорӈ<num><cl2>:тʼор̌    # five animals
-тʼорӈ<num><cl3>:тʼоӄр̌    # five objects
+тʼорӈ<num><cl1>:тʼорӈ    # five people          yes
+тʼорӈ<num><cl2>:тʼор̌    # five animals          no
+тʼорӈ<num><cl3>:тʼоӄр̌    # five objects         no
 
-ӈах<num>:ӈах        # six
-ӈамк<num>:ӈамк      # seven
-минр̌<num>:минр̌      # eight
+ӈах<num>:ӈах        # six                       yes
 
-няндорӈ<num><cl1>:няндорӈ # nine people
-няндорӈ<num><cl2>:няндор̌  # nine animals
-няндорӈ<num><cl3>:няндор̌  # nine objects
+ӈамк<num>:ӈамк      # seven                     no
 
-мӽоӈ<num><cl1>:мӽоӈ      # ten people
-мӽоӈ<num><cl2>:мӽос      # ten animals
-мӽоӈ<num><cl2>:мӽоӈ      # DIR/LR ten animals
-мӽоӈ<num><cl3>:мӽоӄр̌      # ten objects
+минр̌<num>:минр̌      # eight                     no
 
-PATTERN NumeralStem
+няндорӈ<num><cl1>:няндорӈ # nine people         yes
+няндорӈ<num><cl2>:няндор̌  # nine animals        no
+няндорӈ<num><cl3>:няндор̌  # nine objects        no
+
+мӽоӈ<num><cl1>:мӽоӈ      # ten people           yes
+мӽоӈ<num><cl2>:мӽос      # ten animals          yes
+мӽоӈ<num><cl2>:мӽоӈ      # DIR/LR ten animals   yes
+мӽоӈ<num><cl3>:мӽоӄр̌      # ten objects         no
+
+PATTERNS
 NumeralRoot
 NumeralRoot Comp NounRoot [<n>:]
 
-# Numbers don't work right now #
+# Numbers don't work right now
 
 #LEXICON VerbRoot
 #TVerbRoot

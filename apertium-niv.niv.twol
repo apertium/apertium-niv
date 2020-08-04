@@ -44,11 +44,11 @@ Consonant = Б В Г Ӷ Ғ Ӻ Д Ж З Й К Ӄ Л М Н Ӈ П Р Р̌ С Т Ф 
 
 Sonorant = н ӈ м л ;
 
-A1 = Ф Р̌ С Х Ӽ
-     ф р̌ с х ӽ ;
+A1 = Ф Р С Х Ӽ
+     ф р с х ӽ ;
 
-A1a = Ф Р̌ С Ӽ
-      ф р̌ с ӽ ;
+A1a = Ф Р С Ӽ
+      ф р с ӽ ;
 
 B = П Т Ч К Ӄ
     п т ч к ӄ ;
@@ -161,7 +161,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 %{G%}:г <=> [ :Sonorant | %{х%}: ] %>: _ ;
 
 "Set /G/ to <к> after voiceless fricatives"
-%{G%}:к <=> :A1a %>: _ ;
+%{G%}:к <=> :A1a (: ̌) %>: _ ;
 
 "Set /Г/ to <ғ> after voiced stops"
 %{Г%}:ғ <=> :C (ь:) %>: _ ;
@@ -170,7 +170,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 %{Г%}:г <=> [ :Sonorant | %{х%}: | :Vowel ] %>: _ ;
 
 "Set /Г/ to <к> after voiceless fricatives"
-%{Г%}:к <=> :A1a %>: _ ;
+%{Г%}:к <=> :A1a (: ̌) %>: _ ;
 
 "Set /Q/ to <ӻ> after voiced stops"
 %{Q%}:ӻ <=> :C (ь:) %>: _ ;
@@ -179,7 +179,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 %{Q%}:ӽ <=> :B (ь:) %>: _ ;
 
 "Set /R/ to <т> after fricatives"
-%{R%}:т <=> [ :A1a | :B1 ] (%>:) _ ;
+%{R%}:т <=> [ :A1a (: ̌) | :B1 ] (%>:) _ ;
 
 "Set /R/ to <д> after sonorants"
 %{R%}:д <=> [ :Sonorant | :Vowel | %{х%}:ғ ] (%>:) _ ;
@@ -187,47 +187,47 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
           _ %{o%}:0 ;
 
 "Set /B/ to <п> after fricatives"
-%{B%}:п <=> [ :A1 | :B1 ] (%>:) _ ;
+%{B%}:п <=> [ :A1 (: ̌) | :B1 ] (%>:) _ ;
 
-"Set /B/ to <б> after sonorants"
+"Set /B/ to <б> after sonorants"      ! the 'except' includes р when it should include р̌
 %{B%}:б <=> [ :Sonorant | :Vowel ] (%>:) _ ;
         except
-          _ (:0) :A1 ;
+          _ (:0) :A1  ;
 
 "Change B1 to B for verbs"
-Cx:Cy <=> :A1 %>: %{v%}:0 _ ;
+Cx:Cy <=> :A1 (: ̌) (%>:) _ ;
           where Cx in B1
                 Cy in B
           matched ;
 
 "Change B1 to C for verbs"
-Cx:Cy <=> :Sonorant (:0) %>: %{v%}:0 _ ;
+Cx:Cy <=> :Sonorant (:0) (%>:) _ ;
           where Cx in B1
                 Cy in C
           matched ;
 ! Sometimes doesn't change in this context
 
 "Change B to B1 for nouns"
-Cx:Cy <=> [ :й | :Sonorant ] :B1 %>: %{n%}:0 _ ;
-            :н :ь %>: %{n%}:0 _ ;
-            ! :ʼ %>: %{n%}:0 _ ;
+Cx:Cy <=> [ :й | :Sonorant ] :B1 _ ;
+            :н :ь (%>:) _ ;
+            ! :ʼ (%>:) _ ;
       except
             _ :ʼ ;
-            :ʼ %>: %{n%}:0 _ ;
+            :ʼ (%>:) _ ;
             .#. _ ;
       where Cx in B
             Cy in B1
       matched ;
 
 !# get rid of this??? #
-"Change B to C for nouns"
-Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>: %{n%}:0 _ ;
-      except
-            _ :ʼ ;
-      where Cx in B
-            Cy in C
-      matched ;
-!######################
+  "Change B to C for nouns"
+  Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>: %{n%}:0 _ ;
+        except
+              _ :ʼ ;
+        where Cx in B
+              Cy in C
+        matched ;
+  !######################
 
 "Change B to C for nouns: update"
 Cx:Cy <=> [ :Vowel | :Sonorant] (:0) _ ;
@@ -239,15 +239,15 @@ Cx:Cy <=> [ :Vowel | :Sonorant] (:0) _ ;
 
 
 "Change A to A1 for nouns"
-Cx:Cy <=> :Vowel [ :B | :д ] (:0) %>: %{n%}:0 _ ;
+Cx:Cy <=> :Vowel [ :B | :д ] (:0) _ ;
       where Cx in B
             Cy in A1
       matched ;
 
 "Change A1 to A for verbs"
-Cx:Cy <=> :A1 %>: %{v%}:0 _ ;
-          :Sonorant %>: %{v%}:0 _ ;
-          :B1 %>: %{v%}:0 _ ;
+Cx:Cy <=> :A1 (: ̌) (%>:) _ ;
+          :Sonorant (%>:) _ ;
+          :B1 (%>:) _ ;
       where Cx in A1
             Cy in B
       matched ;
@@ -265,10 +265,10 @@ Cx:Cy <=> :A1 %>: %{v%}:0 _ ;
 %{ʼ%}:ʼ <=> :B _  ;
 
 "Devoice /z/ after certain aspirates for nouns"
-ч:с <=> [ :ч | :п ]  :ʼ (%>:) %{n%}:0 _ ;
+ч:с <=> [ :ч | :п ]  :ʼ (%>:) _ ;
 
 "Devoice /z/ after certain aspirates for verbs"
-з:с <=> [ :ч | :п ]  :ʼ (%>:) %{v%}:0 _ ;
+з:с <=> [ :ч | :п ]  :ʼ (%>:) _ ;
 
 "Devoice /d/ after voiceless consonants"
 %{д%}:т <=> :VoicelessC %>: _ ;

@@ -219,6 +219,7 @@ Cx:Cy <=> [ :й | :Sonorant ] :B1 %>: %{n%}:0 _ ;
             Cy in B1
       matched ;
 
+!# get rid of this??? #
 "Change B to C for nouns"
 Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>: %{n%}:0 _ ;
       except
@@ -226,6 +227,16 @@ Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>: %{n%}:0 _ ;
       where Cx in B
             Cy in C
       matched ;
+!######################
+
+"Change B to C for nouns: update"
+Cx:Cy <=> [ :Vowel | :Sonorant] (:0) _ ;
+      except
+            _ :ʼ ;
+      where Cx in B
+            Cy in C
+      matched ;
+
 
 "Change A to A1 for nouns"
 Cx:Cy <=> :Vowel [ :B | :д ] (:0) %>: %{n%}:0 _ ;

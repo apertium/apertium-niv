@@ -151,7 +151,7 @@
 LEXICON NounRoot
 умгу:умгу           # woman
 ытык:ытык           # father
-ӄан:ӄан             # doggo
+ӄан<cl2>:ӄан        # doggo
 ӈа:ӈа               # animal
 тыф:ты{ф}           # house
 ми:ми               # inside
@@ -375,18 +375,21 @@ LEXICON POSSESSION
 LEXICON Comp
 +:
 
+PATTERN Possession
+:POSSESSION NounRoot [<n>:] POSSESSION:
+
+PATTERN NounStem
+NounRoot [<n>:]
+Possession
+Possession Comp NounRoot2 [<n>:]
+
 PATTERNS
-# NounRoot [<n>:]
-NounRoot [<n>:] NUMBER CASES
-NounRoot [<n>:] NUMBER CASES CLITICS
+NounStem NUMBER CASES
+NounStem NUMBER CASES CLITICS
 # NounRoot [<n>+:] TVerbRoot [<v><tv>:]    # Incorporation
-# :POSSESSION NounRoot [<n>:] POSSESSION:
-:POSSESSION NounRoot [<n>:] POSSESSION: NUMBER CASES
-:POSSESSION NounRoot [<n>:] POSSESSION: NUMBER CASES CLITICS
 NounRoot [<n>:] Comp NounRoot2 [<n>:]
 NounRoot [<n>:] Comp NounRoot2 [<n>:] CLITICS
-:POSSESSION NounRoot [<n>:] POSSESSION: Comp NounRoot2 [<n>:] NUMBER CASES
-:POSSESSION NounRoot [<n>:] POSSESSION: Comp NounRoot2 [<n>:] NUMBER CASES CLITICS
+
 
 LEXICON ProperNounRoot
 Рум<ant><m>:Рум         # dude called Rum
@@ -396,11 +399,11 @@ PATTERNS
 # ProperNounRoot [<np>:]
 ProperNounRoot [<np>:] CASES
 
-#LEXICON PronounRoot
-#PersPronRoot
-#IndefPronRoot
-#DemPronRoot
-#IntPronRoot
+PATTERN PronounStem
+PersPronRoot [<prn><pers>:]
+IndefPronRoot [<prn><indef>:]
+DemPronRoot [<prn><dem>:]
+IntPronRoot [<prn><int>:]
 
 LEXICON PersPronRoot
 ни<p1><sg>:ни               # I
@@ -412,9 +415,6 @@ LEXICON PersPronRoot
 чыӈ<p2><pl>:чыӈ             # y'all
 имӈ<p3><pl>:имӈ             # they
 пʼи<refl>:пʼи               # oneself
-
-PATTERNS
-PersPronRoot [<prn><pers>:]
 
 LEXICON IndefPronRoot
 ӿуӈрыдь:ӿуӈрыдь  # something like this
@@ -431,10 +431,52 @@ LEXICON DeterminerRoot
 ӿы:ӿы            # that
 ты:ты            # this
 
-LEXICON NumeralRoot
+PATTERNS
+PronounStem CASES CLITICS
+DeterminerRoot Comp NounRoot [<n>:]
 
-нин:н            # one
-мен:м            # two
+# Numbers don't work right now #
+
+LEXICON NumeralRoot      # Sakhalin numbers
+ненӈ<num><cl1>:ненӈ    # one person
+ненӈ<num><cl2>:нян     # one animal/fish
+ненӈ<num><cl3>:няӄр̌    # one object
+
+менӈ<num><cl1>:менӈ      # two people
+менӈ<num><cl2>:мар̌      # two animals
+менӈ<num><cl2>:мор̌      # DIR/LR two animals
+менӈ<num><cl3>:меӄр̌      # two objects
+
+тяӄр̌<num><cl1>:тяӄр̌      # three people
+тяӄр̌<num><cl2>:тёр̌      # three animals
+тяӄр̌<num><cl3>:тяӄр̌      # three objects
+
+нырӈ<num><cl1>:нырӈ      # four people
+нырӈ<num><cl2>:нур̌      # four animals
+нырӈ<num><cl3>:ныкр̌      # four objects
+
+тʼорӈ<num><cl1>:тʼорӈ    # five people
+тʼорӈ<num><cl2>:тʼор̌    # five animals
+тʼорӈ<num><cl3>:тʼоӄр̌    # five objects
+
+ӈах<num>:ӈах        # six
+ӈамк<num>:ӈамк      # seven
+минр̌<num>:минр̌      # eight
+
+няндорӈ<num><cl1>:няндорӈ # nine people
+няндорӈ<num><cl2>:няндор̌  # nine animals
+няндорӈ<num><cl3>:няндор̌  # nine objects
+
+мӽоӈ<num><cl1>:мӽоӈ      # ten people
+мӽоӈ<num><cl2>:мӽос      # ten animals
+мӽоӈ<num><cl2>:мӽоӈ      # DIR/LR ten animals
+мӽоӈ<num><cl3>:мӽоӄр̌      # ten objects
+
+PATTERN NumeralStem
+NumeralRoot
+NumeralRoot Comp NounRoot [<n>:]
+
+# Numbers don't work right now #
 
 #LEXICON VerbRoot
 #TVerbRoot

@@ -230,7 +230,7 @@ Cx:Cy <=> [ :й | :Sonorant ] :B1 _ ;
   !######################
 
 "Change B to C for nouns: update"
-Cx:Cy <=> [ :Vowel | :Sonorant] (:0) _ ;
+Cx:Cy <=> [ :Vowel | :Sonorant] +:0 (:0) _ ;
       except
             _ :ʼ ;
       where Cx in B
@@ -244,10 +244,10 @@ Cx:Cy <=> :Vowel [ :B | :д ] (:0) _ ;
             Cy in A1
       matched ;
 
-"Change A1 to A for verbs"
-Cx:Cy <=> :A1 (: ̌) (%>:) _ ;
-          :Sonorant (%>:) _ ;
-          :B1 (%>:) _ ;
+"Change A1 to B"
+Cx:Cy <=> :A1 (: ̌) +:0 (%>:) _ ;
+          :Sonorant +:0 (%>:) _ ;
+          :B1 +:0 (%>:) _ ;
       where Cx in A1
             Cy in B
       matched ;

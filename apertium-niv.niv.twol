@@ -68,6 +68,27 @@ VoicelessC = К Ӄ П Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
 
 Rules
 
+"Set %{Ч%} to т everywhere except where it becomes з, с, or д"
+%{Ч%}:т <=> _ ;
+      except
+      [ :Vowel | :Sonorant] +:0 (:0) _ ;
+      [ :й | :Sonorant ] :B1 _ ;
+      :н :ь (%>:) _ ;
+      ! :ʼ (%>:) _ ;
+      [ :ч | :п ]  :ʼ (%>:) _ ;
+
+"Change %{Ч%} to д where B goes to C"
+%{Ч%}:д <=> [ :Vowel | :Sonorant] +:0 (:0) _ ;
+
+"Change %{Ч%} to з where B goes to B1"
+%{Ч%}:з <=> [ :й | :Sonorant ] :B1 _ ;
+            :н :ь (%>:) _ ;
+            ! :ʼ (%>:) _ ;
+      except
+            _ :ʼ ;
+            :ʼ (%>:) _ ;
+            .#. _ ;
+
 "Remove /a/ after vowel-ending stem"
 %{a%}:0 <=> :Vowel (%{f%}:) %>: _ ;
 
@@ -131,7 +152,6 @@ Rules
 ь:0 <=> _ (%>:) :Vowel ;
           except
           _ (%>:) :ы ;
-
 
 "Iotate vowels after soft sign"
 Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;

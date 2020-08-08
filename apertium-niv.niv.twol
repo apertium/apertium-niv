@@ -4,7 +4,6 @@ Alphabet
  %{a%}:а %{a%}:0 %>:0
  %{G%}:г %{G%}:к %{G%}:х %{G%}:ғ
  %{Г%}:г %{Г%}:к %{Г%}:х %{Г%}:ғ
- %{o%}:о %{o%}:0
  %{u%}:у %{u%}:0
  %{j%}:й %{j%}:0
  %{T%}:т %{T%}:р
@@ -75,7 +74,7 @@ Rules
       [ :й | :Sonorant ] :B1 _ ;
       :н :ь (%>:) _ ;
       ! :ʼ (%>:) _ ;
-      [ :ч | :п ]  :ʼ (%>:) _ ;
+      [ :ч | :п ] (:ʼ) (%>:) _ ;
 
 "Change %{Ч%} to д where B goes to C"
 %{Ч%}:д <=> [ :Vowel | :Sonorant] +:0 (:0) _ ;
@@ -89,23 +88,25 @@ Rules
             :ʼ (%>:) _ ;
             .#. _ ;
 
+
+! Agentive case
 "Remove /a/ after vowel-ending stem"
-%{a%}:0 <=> :Vowel (%{f%}:) %>: _ ;
+%{a%}:0 <=> :Vowel (%{f%}:) (%>:) (:0) _ ;
 
+
+! Locative and Ablative cases
 "Remove /u/ after vowel-ending stem"
-%{u%}:0 <=> :Vowel (%{f%}:) (%>:) %>: _ ;
+%{u%}:0 <=> :Vowel (%{f%}:) (%>:) (:0) _ ;
 
-"Remove /i/ after vowel-ending stem"
-%{i%}:0 <=> :Vowel %>: _ ;
 
+! Locative case -- why isn't it working?????
 "Remove /j/ after /i/"
-%{j%}:0 <=> и (%>:) (%{u%}:0) _ ;
+%{j%}:0 <=> и (%>:) {u}:0 _ ;
 
+
+! Comparative case
 "Remove /ɤ/ after vowel-ending stem"
-%{y%}:0 <=> :Vowel %>: _ ;
-
-"Remove /o/ after vowel-ending stem"
-%{o%}:0 <=> :Vowel %>: %{R%}: _ ;
+%{y%}:0 <=> :Vowel (%>:) (:0) _ ;
 
 "Remove /f/ before another stem"
 %{f%}:0 <=> _ %>: ;
@@ -160,19 +161,21 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
   matched ;
 
 "Voice /f/ before sonorant and vowels"
-%{ф%}:в <=> :Vowel (%>:) _ (%>:) [:Sonorant | :Vowel] ;
+%{ф%}:в <=> :Vowel (%>:) (:0) _ (%>:) (:0) [:Sonorant | :Vowel] ;
 
 "Voice /x/ before class C"
 %{х%}:ғ <=> _ (%>:) :C ;
 
+
+! For vocative case
 "Lengthen preceding vowel"
-%{V%}:Vy <=> :Vx %>: _ ;
+%{V%}:Vy <=> :Vx (%>:) (:0) _ ;
   where Vx in (а я э е и ы о ё у ю)
     Vy in (а а э э и ы о о у у)
   matched ;
 
 "Add /a/ after consonant at morpheme boundary"
-%{V%}:а <=> :Consonant %>: _ ;
+%{V%}:а <=> :Consonant (%>:) (:0) _ ;
 
 "Set /G/ to <ғ> after voiced stops and vowels"
 %{G%}:ғ <=> [ :C | :Vowel ] (ь:) %>: _ ;
@@ -198,13 +201,14 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 "Set /Q/ to <ӽ> after voiceless stops"
 %{Q%}:ӽ <=> :B (ь:) %>: _ ;
 
+
+! Dative case
 "Set /R/ to <т> after fricatives"
-%{R%}:т <=> [ :A1a (: ̌) | :B1 ] (%>:) _ ;
+%{R%}:т <=> [ :A1 (: ̌) | :B1 ] (%>:) (:0) _ ;
 
 "Set /R/ to <д> after sonorants"
-%{R%}:д <=> [ :Sonorant | :Vowel | %{х%}:ғ ] (%>:) _ ;
-        except
-          _ %{o%}:0 ;
+%{R%}:д <=> :Sonorant (%>:) (:0) _ ;
+
 
 "Set /B/ to <п> after fricatives"
 %{B%}:п <=> [ :A1 (: ̌) | :B1 ] (%>:) _ ;
@@ -239,15 +243,13 @@ Cx:Cy <=> [ :й | :Sonorant ] :B1 _ ;
             Cy in B1
       matched ;
 
-!# get rid of this??? #
-  "Change B to C for nouns"
-  Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>: %{n%}:0 _ ;
-        except
-              _ :ʼ ;
-        where Cx in B
-              Cy in C
-        matched ;
-  !######################
+!  "Change B to C for nouns"
+  !  Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>: %{n%}:0 _ ;
+  !        except
+  !              _ :ʼ ;
+  !        where Cx in B
+  !              Cy in C
+  !        matched ;
 
 "Change B to C for nouns: update"
 Cx:Cy <=> [ :Vowel | :Sonorant] +:0 (:0) _ ;
@@ -257,12 +259,23 @@ Cx:Cy <=> [ :Vowel | :Sonorant] +:0 (:0) _ ;
             Cy in C
       matched ;
 
-
-"Change A to A1 for nouns"
-Cx:Cy <=> :Vowel [ :B | :д ] (:0) _ ;
+"Change A to A1 after B: update"
+Cx:Cy <=> [ :B ] +:0 (:0) _ :ʼ ;
       where Cx in B
             Cy in A1
       matched ;
+
+"Change B to B1 after B: update"
+Cx:Cy <=> [ :B ] +:0 (:0) _ ;
+      where Cx in B
+            Cy in B1
+      matched ;
+
+! "Change A to A1 for nouns"
+  ! Cx:Cy <=> :Vowel [ :B | :д ] (:0) _ ;
+  !      where Cx in B
+  !            Cy in A1
+  !      matched ;
 
 "Change A1 to B"
 Cx:Cy <=> :A1 (: ̌) +:0 (%>:) _ ;
@@ -285,10 +298,10 @@ Cx:Cy <=> :A1 (: ̌) +:0 (%>:) _ ;
 %{ʼ%}:ʼ <=> :B _  ;
 
 "Devoice /z/ after certain aspirates for nouns"
-ч:с <=> [ :ч | :п ]  :ʼ (%>:) _ ;
+ч:с <=> [ :ч | :п ]  (:ʼ) (%>:) _ ;
 
 "Devoice /z/ after certain aspirates for verbs"
-з:с <=> [ :ч | :п ]  :ʼ (%>:) _ ;
+з:с <=> [ :ч | :п ]  (:ʼ) (%>:) _ ;
 
 "Devoice /d/ after voiceless consonants"
 %{д%}:т <=> :VoicelessC %>: _ ;

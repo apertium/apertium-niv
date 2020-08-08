@@ -101,33 +101,6 @@
 # <emph>
 # <poss>
 # >      ! Morpheme boundary
-# {х}     ! Cyrillic
-# {I}     ! in some numeral
-# !%ʼ
-# {ʼ}
-# {и}
-
-# {д}     ! undergo voicing
-# {ф}
-
-# {a}     ! delete sometimes
-# {o}
-# {u}
-# {y}
-# {j}
-# {f}
-# {ь}
-
-# {T}     ! (Latin)
-# {X}     ! (Latin)
-# {V}
-# {Q}
-# {R}
-# {B}
-# {G}
-# {Г}
-# {v}
-# {n}
 
 # ! Punctuation tags
 # <sent>      ! Sentence marker
@@ -160,9 +133,9 @@ LEXICON NounRoot
 сета:сета           # sugar
 ойдам:ойдам         # baby
 курӈ:курӈ           # universe
-тяӄо:{Ч}{ь}аӄо        # knife
+тяӄо:{Ч}{ь}аӄо      # knife
 оола:оола           # child
-чʼатьф:чʼ{ь}ать{ф}  # bog, swamp
+чатьф:{Ч}{ь}атьф  # bog, swamp
 ыф:ы{ф}             # beard
 арф:ар{ф}           # side of boat
 ӿуньф:ӿунь{ф}       # barrel
@@ -356,7 +329,8 @@ LEXICON NUMBER
 LEXICON CASES
 <nom>:>              # Nominative
 <age>:>{a}ӽ          # Agentive
-<dat>:>{R}{o}ӽ       # Dative
+<dat>:>{R}оӽ         # Dative
+<dat>:>{R}ӽ          # Dir/LR
 <ins>:>{G}ир         # Instrumental
 <loc>:>{u}{j}н       # Locative
 <abl>:>{u}х          # Ablative
@@ -378,7 +352,7 @@ LEXICON CLITICS
 
 LEXICON POSSESSION
 <px1sg>:нь>          # 1sg
-<px2sg>:чʼ>          # 2sg
+<px2sg>:ч>           # 2sg
 <px3sg>:{и}>         # 3sg
 <px1plex>:ньыӈ>      # 1pl.excl
 <px1plin>:мер>       # 1pl.incl

@@ -1,0 +1,64 @@
+Config:
+  hfst:
+    App: hfst-lookup
+    Gen: niv.autogen.hfst
+    Morph: niv.automorf.hfst
+
+Tests:
+  "[lexd] possessed noun with ть/з/дь/с":
+    тяӄо<n><sg><nom> : тяӄо
+    тяӄо<n><px1sg><sg><nom> : ньзаӄо
+    тяӄо<n><px2sg><sg><nom> : чсаӄо
+    тяӄо<n><px3sg><sg><nom> : идяӄо
+
+  "[lexd] possessed noun with т/р/д/р̌":
+    туӈ<n><sg><nom> : туӈ
+    туӈ<n><px1sg><sg><nom> : ньруӈ
+    туӈ<n><px2sg><sg><nom> : чр̌уӈ
+    туӈ<n><px3sg><sg><nom> : идуӈ
+
+  "[lexd] possessed noun with тʼ/р̌":
+    тʼом<n><sg><nom> : тʼом
+    тʼом<n><px1sg><sg><nom> : ньр̌ом
+    тʼом<n><px2sg><sg><nom> : чр̌ом
+    тʼом<n><px3sg><sg><nom> : итʼом
+
+  "[lexd] vocative nouns":
+    умгу<n><sg><voc> : умгуу
+    ытык<n><sg><voc> : ытыка
+    ӈа<n><sg><voc> : ӈаа
+    ми<n><sg><voc> : мии
+    ыф<n><sg><voc> : ыва
+    ӈыю<n><sg><voc> : ӈыюу
+    ӄан<n><sg><voc> : ӄана
+    вағс<n><sg><voc> : вағса
+
+  "[lexd] agentive nouns":
+    умгу<n><sg><age> : умгуӽ
+    ытык<n><sg><age> : ытыкаӽ
+    ӈа<n><sg><age> : ӈаӽ
+    ми<n><sg><age> : миӽ
+    ыф<n><sg><age> : ываӽ
+    ӈыю<n><sg><age> : ӈыюӽ
+    ӄан<n><sg><age> : ӄанаӽ
+    вағс<n><sg><age> : вағсаӽ
+
+  "[lexd] locative nouns":
+    умгу<n><sg><loc> : умгуйн
+    ытык<n><sg><loc> : ытыкуйн
+    ӈа<n><sg><loc> : ӈайн
+    ми<n><sg><loc> : мин
+    ыф<n><sg><loc> : ывуйн
+    ӈыю<n><sg><loc> : ӈыюйн
+    ӄан<n><sg><loc> : ӄануйн
+    вағс<n><sg><loc> : вағсуйн
+
+  "[lexd] dative nouns":
+    умгу<n><sg><dat> : умгуроӽ
+    ытык<n><sg><dat> : ытыкроӽ
+    ӈа<n><sg><dat> : ӈароӽ
+    ми<n><sg><dat> : мироӽ
+    ыф<n><sg><dat> : ыфроӽ
+    ӈыю<n><sg><dat> : ӈыюроӽ
+    ӄан<n><sg><dat> : ӄандоӽ
+    вағс<n><sg><dat> : вағстоӽ

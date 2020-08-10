@@ -428,8 +428,29 @@ DeterminerRoot [<det><dem>:] Comp NounRoot [<n>:]
 
 LEXICON NumeralRoot      # Sakhalin numbers
 ненӈ<num><cl1>:ненӈ    # one person             yes
-ненӈ<num><cl2>:нян     # one animal/fish        yes
+ненӈ<num><cl2>:нян     # one animal or fish     yes
 ненӈ<num><cl3>:няӄр̌    # one object             no
+ненӈ<num><cl4>:нир̌     # one sled
+ненӈ<num><cl5>:няр     # one bundle of dried fish
+ненӈ<num><cl6>:ньма    # one ручная четверть (что это?)
+ненӈ<num><cl7>:ня      # one armspan (sazhen)
+ненӈ<num><cl8>:ньғуви  # one bundle of dog food
+ненӈ<num><cl9>:ньӈаӄ   # one twig of stringed smelt
+ненӈ<num><cl10>:ньвор  # one seine (fishing net)
+ненӈ<num><cl11>:ньфат  # one fishing tackle for seals and kalugas
+ненӈ<num><cl12>:ниу    # one неводный яч (что это?)
+ненӈ<num><cl13>:нео    # one fishing net or seine (how is this different from 10?)
+ненӈ<num><cl14>:ньлай  # one strand of rope
+ненӈ<num><cl15>:низчу  # one family
+ненӈ<num><cl16>:ньла   # one pole
+ненӈ<num><cl17>:нявр    # one place
+ненӈ<num><cl18>:ньвасӄ  # one paired object
+ненӈ<num><cl18>:пасӄ    # DIR/LR one paired object
+ненӈ<num><cl19>:неть    # one cedar, spruce, or fir plank
+ненӈ<num><cl20>:ньрах   # one flat object
+ненӈ<num><cl21>:нех     # one long object
+ненӈ<num><cl22>:ник     # one small, round object
+ненӈ<num><cl22>:ним     # one boat
 
 менӈ<num><cl1>:менӈ      # two people           yes
 менӈ<num><cl2>:мар̌      # two animals           no
@@ -461,9 +482,52 @@ LEXICON NumeralRoot      # Sakhalin numbers
 мӽоӈ<num><cl1>:мӽоӈ      # ten people           yes
 мӽоӈ<num><cl2>:мӽос      # ten animals          yes
 мӽоӈ<num><cl2>:мӽоӈ      # DIR/LR ten animals   yes
-мӽоӈ<num><cl3>:мӽоӄр̌      # ten objects         no
+мӽоӈ<num><cl3>:мӽоӄр̌     # ten objects          no
+
+# How to do 11-19?
+
+меӻ<num><cl1>:меӻ           # twenty people
+
+тьӽо<num><cl1>:тьӽо         # thirty people
+
+нху<num><cl1>:нху           # forty people
+
+тʼоӻ<num><cl1>:тʼоӻ         # fifty people
+
+ӈағмӽоӈ<num><cl1>:ӈағмӽоӈ   # sixty people
+
+ӈамгмӽоӈ<num><cl1>:ӈамгмӽоӈ # seventy people
+
+минр̌мӽоӈ<num><cl1>:минр̌мӽоӈ # eighty people
+
+няндорӈмӽоӈ<num><cl1>:няндорӈмӽоӈ # ninety people
+
+ньр̌аӈӷ<num><cl1>:ньр̌аӈӷ     # one hundred people
+
+мер̌аӈӷ<num><cl1>:мер̌аӈӷ     # two hundred people
+
+тьр̌аӈӷ<num><cl1>:тьр̌аӈӷ     # three hundred people
+
+ныр̌аӈӷ<num><cl1>:ныр̌аӈӷ     # four hundred people
+
+тʼор̌аӈӷ<num><cl1>:тʼор̌аӈӷ   # five hundred people
+
+ӈағр̌аӈӷ<num><cl1>:ӈағр̌аӈӷ   # six hundred people
+
+ӈамкр̌аӈӷ<num><cl1>:ӈамкр̌аӈӷ # seven hundred people
+
+минр̌аӈӷ<num><cl1>:минр̌аӈӷ   # eight hundred people
+
+минрр̌аӈӷ<num><cl1>:минрр̌аӈӷ # DIR/LR eight hundred people
+
+няндорӈр̌аӈӷ<num><cl1>:няндорӈр̌аӈӷ # nine hundred people
+
+немӄаӈ<num><cl1>:немӄаӈ     # one thousand people
+
+тʼуму<num><cl1>:тʼуму       # one million people
 
 PATTERNS
+NumeralRoot
 NumeralRoot
 NumeralRoot Comp NounRoot [<n>:]
 

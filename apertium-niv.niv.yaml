@@ -58,7 +58,39 @@ Tests:
     ытык<n><sg><dat> : ытыкроӽ
     ӈа<n><sg><dat> : ӈароӽ
     ми<n><sg><dat> : мироӽ
-    ыф<n><sg><dat> : ыфроӽ
+    ыф<n><sg><dat> : ыфтоӽ
     ӈыю<n><sg><dat> : ӈыюроӽ
     ӄан<n><sg><dat> : ӄандоӽ
     вағс<n><sg><dat> : вағстоӽ
+
+  "[lexd] instrumental nouns":
+    умгу<n><sg><ins> : умгуғир
+    ытык<n><sg><ins> : ытыкғир
+    ӈа<n><sg><ins> : ӈағир
+    ми<n><sg><ins> : миғир
+    ыф<n><sg><ins> : ыфкир
+    ӈыю<n><sg><ins> : ӈыюғир
+    ӄан<n><sg><ins> : ӄангир
+    вағс<n><sg><ins> : вағскир
+
+  "[lexd] ablative nouns":
+    умгу<n><sg><abl> : умгух
+    ытык<n><sg><abl> : ытыкух
+    ӈа<n><sg><abl> : ӈах
+
+  "[lexd] terminative nouns":
+    умгу<n><sg><term> : умгуроӻо
+    ытык<n><sg><term> : ытыкроӻо
+    ыф<n><sg><term> : ыфтоӻо
+    ӄан<n><sg><term> : ӄандоӻо
+    вағс<n><sg><term> : вағстоӻо
+
+  "[lexd] comparative nouns":
+    умгу<n><sg><comp> : умгук
+    ытык<n><sg><comp> : ытыкык
+    ӈа<n><sg><comp> : ӈак
+    ми<n><sg><comp> : мик
+    ыф<n><sg><comp> : ывык
+    ӈыю<n><sg><comp> : ӈыюк
+    ӄан<n><sg><comp> : ӄанык
+    вағс<n><sg><comp> : вағсык

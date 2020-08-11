@@ -334,9 +334,9 @@ LEXICON CASES
 <ins>:>{G}ир         # Instrumental
 <loc>:>{u}{j}н       # Locative
 <abl>:>{u}х          # Ablative
-<term>:>{T}{ʼ}ыкы    # Terminative
+<term>:>{R}оӻо       # Terminative
+<term>:>{T}{ʼ}ыкы    # Dir/LR
 <term>:>{T}{ʼ}{X}а   # Dir/LR
-<term>:>{R}оӻо       # Dir/LR
 <comp>:>{y}к         # Comparative
 <voc>:>{V}           # Vocative
 # INCORPORATE-N ;    # Nominative

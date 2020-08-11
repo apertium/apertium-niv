@@ -177,14 +177,14 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 "Add /a/ after consonant at morpheme boundary"
 %{V%}:а <=> :Consonant (%>:) (:0) _ ;
 
-"Set /G/ to <ғ> after voiced stops and vowels"
-%{G%}:ғ <=> [ :C | :Vowel ] (ь:) %>: _ ;
+"Set /G/ to <ғ> after stops and vowels"
+%{G%}:ғ <=> [ :B | :Vowel ] (ь:) (%>:) (:0) _ ;
 
 "Set /G/ to <г> after sonorants and in the word нивх"
-%{G%}:г <=> [ :Sonorant | %{х%}: ] %>: _ ;
+%{G%}:г <=> [ :Sonorant | %{х%}: ] (%>:) (:0) _ ;
 
 "Set /G/ to <к> after voiceless fricatives"
-%{G%}:к <=> :A1a (: ̌) %>: _ ;
+%{G%}:к <=> :A1a (: ̌) (%>:) (:0) _ ;
 
 "Set /Г/ to <ғ> after voiced stops"
 %{Г%}:ғ <=> :C (ь:) %>: _ ;

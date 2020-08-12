@@ -138,6 +138,7 @@ LEXICON NounRoot
 чатьф:{Ч}{ь}атьф  # bog, swamp
 ыф:ы{ф}             # beard
 арф:ар{ф}           # side of boat
+му:му               # boat
 ӿуньф:ӿунь{ф}       # barrel
 пердь:пердь         # burden
 ыкын:ыкын           # older brother
@@ -306,10 +307,10 @@ LEXICON NounRoot
 утку:утку           # husband
 
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#!!! Definite Sakhalin words !!!
+#!!! Certain Sakhalin words !!!
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-# ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ
+# ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
 
 ванивӈ:ванивӈ       # warrior, soldier
 вер̌кинивӈ:вер̌кинивӈ # seller
@@ -319,6 +320,32 @@ LEXICON NounRoot
 ётнивӈ:ётнивӈ       # tailor
 ётр̌аӈӷ:ётр̌аӈӷ       # seamstress
 иврыр̌аӈӷ:иврыр̌аӈӷ   # cleaner, janitor (female)
+кʼилӈ:кʼилӈ         # Evenk
+кʼуғи:кʼуғи         # Ainu (person)
+кʼынивӈ:кʼынивӈ     # jack of all trades; craftsman, artisan
+ӄʼа:ӄʼа             # name (given or family)
+ӄʼатьӈ:ӄʼатьӈ       # tribe, people, breed, type, kind, race, sort, example
+лазивинивӈ:лазивинивӈ # passerby
+лепр̌анивӈ:лепр̌анивӈ # baker
+лернивӈ:лернивӈ     # artist
+лаўлаўк:лаўлаўк     # argumentative person, debater
+нивӈ:нивӈ           # person
+ниғвӈ:ниғвӈ         # Nivkh
+нивғӈ:нивғӈ         # Nivkh
+лотинивӈ:лотинивӈ   # Russian (person)
+лоти:лоти           # Russian
+лотя:лотя           # Russian
+меньвонивӈ:меньвонивӈ # helmsman, driver
+мраӈилак:мраӈилак   # lazybones, slacker, loafer, idler
+мрынивӈ:мрынивӈ     # swimmer
+момр̌:момр̌           # slob, messy/unkempt person
+мувонивӈ:мувонивӈ   # boatman, boater
+мынивӈ:мынивӈ       # listener, audience
+ӈаӈанғк:ӈаӈанғк     # hunter
+ӈарлак:ӈарлак       # fat person, fatty
+ӈафӄр̌аӈӷ:ӈафӄр̌аӈӷ   # female friend
+орӈар̌:орӈар̌         # Orok, Uilta
+палӈатӈунивӈ:палӈатӈунивӈ # woodsman, forest ranger
 
 ALIAS NounRoot NounRoot2
 
@@ -375,9 +402,17 @@ Possession Comp NounRoot2 [<n>:]
 PATTERNS
 NounStem NUMBER CASES
 NounStem NUMBER CASES CLITICS
-NounRoot [<n>:] Comp TVerbRoot [<v><tv>:]    # Incorporation
-NounRoot [<n>:] Comp NounRoot2 [<n>:]
-NounRoot [<n>:] Comp NounRoot2 [<n>:] CLITICS
+
+NounStem Comp NounRoot2 [<n>:]
+NounStem Comp NounRoot2 [<n>:] CLITICS
+
+NounStem Comp VerbStem
+NounStem Comp VerbStem TENSE
+NounStem Comp VerbStem TENSE NonFinite SubjAgree
+NounStem Comp VerbStem TENSE MOOD
+NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CLITICS
+NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CASES
+NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CASES CLITICS
 
 
 LEXICON ProperNounRoot
@@ -662,11 +697,16 @@ LEXICON MOOD
 <pot>:>{Q}ана
 # %<imp%>:%>idk
 
-PATTERNS
+PATTERN VerbStem
 TVerbRoot [<v>:] [<tv>:]
-TVerbRoot [<v>:] [<tv>:] TENSE
-TVerbRoot [<v>:] [<tv>:] TENSE NonFinite SubjAgree
-TVerbRoot [<v>:] [<tv>:] TENSE MOOD
+IVerbRoot [<v>:] [<iv>:]
+
+PATTERNS
+VerbStem
+VerbStem TENSE
+VerbStem TENSE NonFinite SubjAgree
+VerbStem TENSE MOOD
+VerbStem Comp NounRoot2 [<n>:]
 
 # LEXICON IVerb-AdvRoot
 # ур:ур        # well

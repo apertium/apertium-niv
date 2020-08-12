@@ -189,19 +189,19 @@ LEXICON NounRoot
 мла:мла 	          # earlobe
 вих:вих 	          # nose
 ньхыр:ньхыр 	      # eyebrow
-ыӈг:ыӈг 	          # mouth
+ыӈг:ыӈг 	          # mouth            ! Amur
 ӈығс:ӈығс 	        # tooth
 эмс:эмс 	          # molar
 ӈыньф:ӈынь{ф} 	    # bone
-ывлх:ывлх 	        # lip
-ити:ити 	          # chin
+ывлх:ывлх 	        # lip              ! Amur
+ити:ити 	          # chin             ! Amur
 оӻри:оӻри 	        # nape, occiput
 тʼуур:т{ʼ}уур       # fire
 кʼуты:к{ʼ}уты       # hole
 керӄ:керӄ           # sea
 пʼирӈыр:п{ʼ}ирӈыр   # sazan (kind of carp)
 теӈи:теӈи           # salmon
-ыс:ыс               # owner
+ыс:ыс               # owner            ! Amur
 лаӈр:лаӈр           # seal
 ӿыйк:ӿыйк           # hare
 пых:пых             # cuckoo
@@ -310,8 +310,6 @@ LEXICON NounRoot
 #!!! Certain Sakhalin words !!!
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-# ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
-
 ванивӈ:ванивӈ       # warrior, soldier
 вер̌кинивӈ:вер̌кинивӈ # seller
 вонӈ:вонӈ           # inhabitant, villager
@@ -346,6 +344,45 @@ LEXICON NounRoot
 ӈафӄр̌аӈӷ:ӈафӄр̌аӈӷ   # female friend
 орӈар̌:орӈар̌         # Orok, Uilta
 палӈатӈунивӈ:палӈатӈунивӈ # woodsman, forest ranger
+пес:пес             # nurse, nanny
+питғыӈдаюнивӈ:питғыӈдаюнивӈ # writer, author
+питғыӈурунивӈ:питғыӈурунивӈ # reader
+полмк:полмк         # blind person
+пʼезмулак:пʼезмулак # egomaniac
+пʼр̌ынивӈ:пʼр̌ынивӈ   # newcomer, stranger
+руғнивӈ:руғнивӈ     # voter, elector; sorter
+тяӈги:тяӈги         # boss
+тʼаӈрк:тʼаӈрк       # trickster, dodger (ловкач)
+ӽанивӈ:ӽанивӈ       # shooter, rifleman
+уғмунивӈ:уғмунивӈ   # champion, hero
+ӿиўлак:ӿиўлак       # добытчик (miner, hunter, fisherman (i.e. extractor); breadwinner)
+чолак:чолак         # pauper, poor man
+уғмунивӈ:уғмунивӈ   # champion, hero
+чоӈанғк:чоӈанғк     # fisherman
+ызӈ:ызӈ             # owner
+эзмулак:эзмулак     # favorite
+эньӄӈард:эньӄӈард   # thief, robber
+янд:янд             # Nanai
+ясӄнивӈ:ясӄнивӈ     # tailor
+хитук:хитук         # tailor
+ятӈунивӈ:ятӈунивӈ   # watchman, guard
+ави:ави             # pharynx
+авлых:авлых         # lip
+ағри:ағри           # saliva
+алми:алми           # palate (of mouth)
+амх:амх             # mouth
+анғи:анғи           # heel
+аў:аў               # voice
+аф:аф               # moustache, beard
+ух:ух               # nose
+вих:вих             # nose
+илх:илх             # gum(s) (around teeth)
+илх:илх             # buckskin
+иты:иты             # chin, jaw, jowl
+кыдр:кыдр           # back, spine
+кыр̌:кыр̌             # umbilical cord
+
+# ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
 
 ALIAS NounRoot NounRoot2
 

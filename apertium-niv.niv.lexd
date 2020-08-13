@@ -181,18 +181,18 @@ LEXICON NounRoot
 ӈир:ӈир 	          # right (not left)
 ӈамадь:ӈамадь       # skin
 няӽ:няӽ 	          # eye
-них:них 	          # tear (from the eye)
-т’адм:т{ʼ}адм 	    # pate, crown of head
+них:них 	          # tear (from eye)
+т’адм:т{ʼ}адм 	    # pate, crown of head        ! see def. in Sakhalin section
 т’а:т{ʼ}а 	        # pate, crown of head
 ӿеғми:ӿеғми 	      # temple (of head)
 нос:нос 	          # ear
-мла:мла 	          # earlobe
+мла:мла 	          # earlobe          ! means 'ear' in Sakhalin
 вих:вих 	          # nose
 ньхыр:ньхыр 	      # eyebrow
 ыӈг:ыӈг 	          # mouth            ! Amur
-ӈығс:ӈығс 	        # tooth
+ӈығс:ӈығс 	        # tooth            ! Amur
 эмс:эмс 	          # molar
-ӈыньф:ӈынь{ф} 	    # bone
+ӈыньф:ӈынь{ф} 	    # bone             ! Amur
 ывлх:ывлх 	        # lip              ! Amur
 ити:ити 	          # chin             ! Amur
 оӻри:оӻри 	        # nape, occiput
@@ -279,14 +279,14 @@ LEXICON NounRoot
 мус:мус             # oats
 ӄʼорӽ:ӄ{ʼ}орӽ       # blockhead, dimwit, dunce
 чылғи:чылғи         # foot
-ынғи:ынғи           # heel
-пих:пих             # knee
-ӈаф:ӈа{ф}           # thigh
+ынғи:ынғи           # heel                  ! Amur
+пих:пих             # knee                  ! Amur
+ӈаф:ӈа{ф}           # thigh                 ! Amur
 ӈиф:ӈи{ф}           # heart
 хых:хых             # calf (of leg)
 кезӈи:кезӈи         # gland
 микрвыкрук:микрвыкрук  # kidneys
-ӈызрк:ӈызрк         # vein
+ӈызрк:ӈызрк         # vein                  ! Amur
 ӈыньф:ӈынь{ф}       # bone
 сусыр:сусыр         # spleen
 тʼвирк:т{ʼ}вирк     # bile
@@ -318,11 +318,11 @@ LEXICON NounRoot
 ётнивӈ:ётнивӈ       # tailor
 ётр̌аӈӷ:ётр̌аӈӷ       # seamstress
 иврыр̌аӈӷ:иврыр̌аӈӷ   # cleaner, janitor (female)
-кʼилӈ:кʼилӈ         # Evenk
-кʼуғи:кʼуғи         # Ainu (person)
-кʼынивӈ:кʼынивӈ     # jack of all trades; craftsman, artisan
-ӄʼа:ӄʼа             # name (given or family)
-ӄʼатьӈ:ӄʼатьӈ       # tribe, people, breed, type, kind, race, sort, example
+кʼилӈ:к{ʼ}илӈ       # Evenk
+кʼуғи:к{ʼ}уғи       # Ainu (person)
+кʼынивӈ:к{ʼ}ынивӈ   # jack of all trades; craftsman, artisan
+ӄʼа:ӄ{ʼ}а           # name (given or family)
+ӄʼатьӈ:ӄ{ʼ}атьӈ     # tribe, people, breed, type, kind, race, sort, example
 лазивинивӈ:лазивинивӈ # passerby
 лепр̌анивӈ:лепр̌анивӈ # baker
 лернивӈ:лернивӈ     # artist
@@ -348,11 +348,11 @@ LEXICON NounRoot
 питғыӈдаюнивӈ:питғыӈдаюнивӈ # writer, author
 питғыӈурунивӈ:питғыӈурунивӈ # reader
 полмк:полмк         # blind person
-пʼезмулак:пʼезмулак # egomaniac
-пʼр̌ынивӈ:пʼр̌ынивӈ   # newcomer, stranger
+пʼезмулак:п{ʼ}езмулак # egomaniac
+пʼр̌ынивӈ:п{ʼ}р̌ынивӈ # newcomer, stranger
 руғнивӈ:руғнивӈ     # voter, elector; sorter
 тяӈги:тяӈги         # boss
-тʼаӈрк:тʼаӈрк       # trickster, dodger (ловкач)
+тʼаӈрк:т{ʼ}аӈрк     # trickster, dodger (ловкач)
 ӽанивӈ:ӽанивӈ       # shooter, rifleman
 уғмунивӈ:уғмунивӈ   # champion, hero
 ӿиўлак:ӿиўлак       # добытчик (miner, hunter, fisherman (i.e. extractor); breadwinner)
@@ -363,8 +363,8 @@ LEXICON NounRoot
 эзмулак:эзмулак     # favorite
 эньӄӈард:эньӄӈард   # thief, robber
 янд:янд             # Nanai
-ясӄнивӈ:ясӄнивӈ     # tailor
-хитук:хитук         # tailor
+ясӄнивӈ:ясӄнивӈ     # tailor('s assistant)
+хитук:хитук         # tailor('s assistant)
 ятӈунивӈ:ятӈунивӈ   # watchman, guard
 ави:ави             # pharynx
 авлых:авлых         # lip
@@ -373,7 +373,7 @@ LEXICON NounRoot
 амх:амх             # mouth
 анғи:анғи           # heel
 аў:аў               # voice
-аф:аф               # moustache, beard
+аф:а{ф)             # moustache, beard
 ух:ух               # nose
 вих:вих             # nose
 илх:илх             # gum(s) (around teeth)
@@ -381,6 +381,73 @@ LEXICON NounRoot
 иты:иты             # chin, jaw, jowl
 кыдр:кыдр           # back, spine
 кыр̌:кыр̌             # umbilical cord
+кʼиғуф:к{ʼ}иғу{ф)   # bladder
+кʼылмр̌:к{ʼ}ылмр̌     # belly button, navel
+кʼур̌:к{ʼ}ур̌         # gut, intestine
+ӄорӄор̌:ӄорӄор̌       # throat
+ӿесӄр̌:ӿесӄр̌         # throat
+ӄʼос:ӄ{ʼ}ос         # neck
+нос:нос 	          # ear
+мла:мла 	          # ear
+мыньк:мыньк         # breast (woman's)
+нетф:нет{ф)         # face
+ӈыньк:ӈыньк         # face
+оск:оск             # face
+ниви:ниви           # birthmark
+нисаӽ:нисаӽ         # tear (from eye)
+носых:носых         # earlobe
+няӽ:няӽ 	          # eye, (pair of) eyes    ! plural is multiple pairs of eyes)
+ӈазл:ӈазл           # foot; sole
+ӈағс:ӈағс           # tooth
+ӈағзыр̌:ӈағзыр̌       # tooth
+эмс:эмс             # tooth
+эмз:эмз             # tooth
+ӈаӻри:ӈаӻри         # shoulder
+ӈазр̌:ӈазр̌           # vein; skin from an animal's paw; trim on a ski from an animal's paw
+ӈай:ӈай             # thigh, hip
+ӈайн:ӈайн           # cheek(bone)
+ӈайрам:ӈайрам       # rib
+ӈайрым:ӈайрым       # rib
+ӈалр̌:ӈалр̌           # kidney
+ӈамх:ӈамх           # hair, fur, wool, pile (in the hair sense)
+ӈаньғыф:ӈаньғы{ф}   # bone
+ӈаньғф:ӈаньғ{ф)     # bone
+ӈарғыр̌:ӈарғы{ф)     # chest
+ӈар̌ӄи:ӈар̌ӄи         # epidermal ridges (those rounded lines on your fingertip)
+ӈаски:ӈаски         # backbone, spine; (mountain) ridge; ceiling beam
+ӈатьх:ӈатьх         # foot, paw (also foot of a thing, like a table)
+ӈаўр̌:ӈаўр̌           # belly (tummy)
+ӈаўр̌к:ӈаўр̌к         # brain
+ӈиф:ӈи{ф}             # heart
+ӈым:ӈым             # peritoneum
+оӻри:оӻри 	        # nape, occiput
+ол:ол               # armpit
+пелад:пелад         # bile
+тʼвир̌к:т{ʼ}вир̌к     # bile
+пихӈаньғыф:пихӈаньғы{ф} # kneecap
+пихты:пихты         # knee
+поп:поп             # bun (of hair), ponytail
+р̌ағунд:р̌ағунд       # mark (on body); decoration
+такань:такань       # fingernail, toenail, claw, talon
+такнь:такнь         # fingernail, toenail, claw, talon
+тамк:тамк           # hand
+тёӈр̌:тёӈр̌           # head
+тивр̌:тивр̌           # liver
+тоӈӄ:тоӈӄ           # elbow
+тоӈр̌:тоӈр̌           # tendon; twins (a pair of?)
+тот:тот             # forearm
+туньм:туньм         # finger
+тыӈ:тыӈ             # lens (of eye)
+тяви:тяви           # stomach
+т’а:т{ʼ}а 	        # pate, crown of head
+т’аӻр̌:т{ʼ}аӻр̌       # bridge of nose
+т’аӻр̌:т{ʼ}аӻр̌       # chipmunk              ! should these be listed separately?
+т’адм:т{ʼ}адм 	    # top/back of the head, from pate to nape
+т’ах:т{ʼ}ах	        # (eye)brow
+т’у:т{ʼ}у 	        # joint (in body)
+т’у:т{ʼ}у 	        # sled                  ! should these be listed separately?
+т’ыӈ:т{ʼ}ыӈ         # fontanelle (soft spot of baby head)
+т’ытьк:т{ʼ}ытьк     # shin
 
 # ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
 
@@ -499,47 +566,48 @@ DeterminerRoot [<det><dem>:] Comp NounRoot [<n>:]
 # Numbers don't work right now
 
 LEXICON NumeralRoot      # Sakhalin numbers
-ненӈ<num><cl1>:ненӈ    # one person             yes
-ненӈ<num><cl2>:нян     # one animal or fish     yes
-ненӈ<num><cl3>:няӄр̌    # one object             no
-ненӈ<num><cl4>:нир̌     # one sled
-ненӈ<num><cl5>:няр     # one bundle of dried fish
-ненӈ<num><cl6>:ньма    # one ручная четверть (что это?)
-ненӈ<num><cl7>:ня      # one armspan (sazhen)
-ненӈ<num><cl8>:ньғуви  # one bundle of dog food
-ненӈ<num><cl9>:ньӈаӄ   # one twig of stringed smelt
-ненӈ<num><cl10>:ньвор  # one seine (fishing net)
-ненӈ<num><cl11>:ньфат  # one fishing tackle for seals and kalugas
-ненӈ<num><cl12>:ниу    # one неводный яч (что это?)
-ненӈ<num><cl13>:нео    # one fishing net or seine (how is this different from 10?)
-ненӈ<num><cl14>:ньлай  # one strand of rope
-ненӈ<num><cl15>:низчу  # one family
-ненӈ<num><cl16>:ньла   # one pole
-ненӈ<num><cl17>:нявр    # one place
-ненӈ<num><cl18>:ньвасӄ  # one paired object
-ненӈ<num><cl18>:пасӄ    # DIR/LR one paired object
-ненӈ<num><cl19>:неть    # one cedar, spruce, or fir plank
-ненӈ<num><cl20>:ньрах   # one flat object
-ненӈ<num><cl21>:нех     # one long object
-ненӈ<num><cl22>:ник     # one small, round object
-ненӈ<num><cl22>:ним     # one boat
+ненӈ<num><cl1>:ненӈ      # one person             yes
+ненӈ<num><cl2>:нян       # one animal or fish     yes
+ненӈ<num><cl3>:няӄр̌      # one object             no
+ненӈ<num><cl4>:нир̌       # one sled
+ненӈ<num><cl5>:няр       # one bundle of dried fish
+ненӈ<num><cl6>:ньма      # one ручная четверть (что это?)
+ненӈ<num><cl7>:ня        # one armspan (sazhen)
+ненӈ<num><cl8>:ньғуви    # one bundle of dog food
+ненӈ<num><cl9>:ньӈаӄ     # one twig of stringed smelt
+ненӈ<num><cl10>:ньвор    # one seine (fishing net)
+ненӈ<num><cl11>:ньфат    # one fishing tackle for seals and kalugas
+ненӈ<num><cl12>:ниу      # one неводный яч (что это?)
+ненӈ<num><cl13>:нео      # one fishing net or seine (how is this different from 10?)
+ненӈ<num><cl14>:ньлай    # one strand of rope
+ненӈ<num><cl15>:низчу    # one family
+ненӈ<num><cl16>:ньла     # one pole
+ненӈ<num><cl17>:нявр     # one place
+ненӈ<num><cl18>:ньвасӄ   # one paired object
+ненӈ<num><cl18>:пасӄ     # DIR/LR one paired object
+ненӈ<num><cl19>:неть     # one cedar, spruce, or fir plank
+ненӈ<num><cl20>:ньрах    # one flat object
+ненӈ<num><cl21>:нех      # one long object
+ненӈ<num><cl22>:ник      # one small, round object
+ненӈ<num><cl22>:ним      # one boat
 
-менӈ<num><cl1>:менӈ      # two people           yes
-менӈ<num><cl2>:мар̌      # two animals           no
-менӈ<num><cl2>:мор̌      # DIR/LR two animals    no
-менӈ<num><cl3>:меӄр̌      # two objects          no
+менӈ<num><cl1>:менӈ       # two people            yes
+менӈ<num><cl2>:мар̌        # two animals           no
+менӈ<num><cl2>:мор̌        # DIR/LR two animals    no
+менӈ<num><cl3>:меӄр̌       # two objects           no
 
-тяӄр̌<num><cl1>:тяӄр̌      # three people         no
-тяӄр̌<num><cl2>:тёр̌      # three animals         no
-тяӄр̌<num><cl3>:тяӄр̌      # three objects        no
+тяӄр̌<num><cl1>:тяӄр̌       # three people          no
+тяӄр̌<num><cl2>:тёр̌        # three animals         no
+тяӄр̌<num><cl3>:тяӄр̌       # three objects         no
+тяӄр̌<num><cl7>:т{ʼ}а      # three armspans (sazhens)
 
-нырӈ<num><cl1>:нырӈ      # four people          yes
-нырӈ<num><cl2>:нур̌      # four animals          no
-нырӈ<num><cl3>:ныкр̌      # four objects         no
+нырӈ<num><cl1>:нырӈ       # four people          yes
+нырӈ<num><cl2>:нур̌        # four animals          no
+нырӈ<num><cl3>:ныкр̌       # four objects         no
 
-тʼорӈ<num><cl1>:тʼорӈ    # five people          yes
-тʼорӈ<num><cl2>:тʼор̌    # five animals          no
-тʼорӈ<num><cl3>:тʼоӄр̌    # five objects         no
+тʼорӈ<num><cl1>:т{ʼ}орӈ   # five people          yes
+тʼорӈ<num><cl2>:т{ʼ}ор̌    # five animals          no
+тʼорӈ<num><cl3>:т{ʼ}оӄр̌   # five objects         no
 
 ӈах<num>:ӈах        # six                       yes
 
@@ -582,7 +650,7 @@ LEXICON NumeralRoot      # Sakhalin numbers
 
 ныр̌аӈӷ<num><cl1>:ныр̌аӈӷ     # four hundred people
 
-тʼор̌аӈӷ<num><cl1>:тʼор̌аӈӷ   # five hundred people
+тʼор̌аӈӷ<num><cl1>:т{ʼ}ор̌аӈӷ # five hundred people
 
 ӈағр̌аӈӷ<num><cl1>:ӈағр̌аӈӷ   # six hundred people
 
@@ -596,7 +664,7 @@ LEXICON NumeralRoot      # Sakhalin numbers
 
 немӄаӈ<num><cl1>:немӄаӈ     # one thousand people
 
-тʼуму<num><cl1>:тʼуму       # one million people
+тʼуму<num><cl1>:т{ʼ}уму     # one million people
 
 PATTERNS
 NumeralRoot
@@ -701,6 +769,13 @@ LEXICON IVerbRoot
 к’лу:к{’}лу     # to be afraid
 вуквук:вуквук   # to be dark
 малғо:малғо     # to be much; a lot
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#!!! Certain Sakhalin words !!!
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+т’а:т{ʼ}а 	    # to breathe
+
 
 LEXICON IrregBoundVerbRoot
 ни:ни           # to eat

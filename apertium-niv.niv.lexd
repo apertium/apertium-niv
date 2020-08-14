@@ -305,11 +305,9 @@ LEXICON NounRoot
 ки:ки               # footwear
 ӄʼоӻа:ӄ{ʼ}оӻа       # nature
 утку:утку           # husband
-
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#!!! Certain Sakhalin words !!!
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #!!! Certain Sakhalin words !!!
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ванивӈ:ванивӈ       # warrior, soldier
 вер̌кинивӈ:вер̌кинивӈ # seller
 вонӈ:вонӈ           # inhabitant, villager
@@ -418,7 +416,7 @@ LEXICON NounRoot
 ӈатьх:ӈатьх         # foot, paw (also foot of a thing, like a table)
 ӈаўр̌:ӈаўр̌           # belly (tummy)
 ӈаўр̌к:ӈаўр̌к         # brain
-ӈиф:ӈи{ф}             # heart
+ӈиф:ӈи{ф}           # heart
 ӈым:ӈым             # peritoneum
 оӻри:оӻри 	        # nape, occiput
 ол:ол               # armpit
@@ -443,11 +441,40 @@ LEXICON NounRoot
 т’аӻр̌:т{ʼ}аӻр̌       # bridge of nose
 т’аӻр̌:т{ʼ}аӻр̌       # chipmunk              ! should these be listed separately?
 т’адм:т{ʼ}адм 	    # top/back of the head, from pate to nape
-т’ах:т{ʼ}ах	        # (eye)brow
+т’ах:т{ʼ}ах	        # forehead
 т’у:т{ʼ}у 	        # joint (in body)
 т’у:т{ʼ}у 	        # sled                  ! should these be listed separately?
 т’ыӈ:т{ʼ}ыӈ         # fontanelle (soft spot of baby head)
 т’ытьк:т{ʼ}ытьк     # shin
+ул:ул               # пазуха (sinus? bosom?)
+унь:унь             # waist, pelvis
+ӿаваф:ӿава{ф}       # lungs (a set probably)
+ӿал:ӿал             # skin (human)
+ӿеғми:ӿеғми 	      # temple (of head)
+ӿеми:ӿеми   	      # temple (of head)
+ӿивр̌:ӿивр̌           # back of hand
+ӿилх:ӿилх           # tongue
+ӿут:ӿут             # torso, body; dermis
+ут:ут               # torso, body; dermis
+чаӄрд:чаӄрд         # eye afflicted with leucoma (i.e. albugo)
+чалм:чалм           # palm (of hand)
+чоӽ:чоӽ             # blood, sap, berry juice, resin, pitch, tar
+чхуф:чхуф           # fist
+чхывр̌:чхывр̌         # eyebrow, eyebrows (a pair of them?)
+эўр̌:эўр̌             # поясница (waist, loins, small of the back?)
+выри:выри           # sore (on body)
+заф:з{ь}а{ф}        # bruise (синяк)
+кесӄф:кесӄ{ф}       # burn, scorch
+ӄмазнд:ӄмазнд       # sickness, disease (especially of the eye?)
+ӿуньд:ӿуньд         # sickness, disease (especially of the eye)
+ӄолаф:ӄола{ф}       # part of the body stricken/afflicted by disease; ill health, ailment, malady, sickness, disease
+ӄʼавр̌:ӄ{ʼ}авр̌       # hot-water bottle
+лилр̌:лилр̌           # phlegm, mucus
+лолӄ:лолӄ           # pus
+ӈарзаф:ӈарза{ф}     # bruise (кровоподтёк)     ! how is this different from заф?
+орӈоӽт:орӈоӽт       # medicinal rhizome of an edible grass
+оӽт:оӽт             # medicine
+поку:поку           # hump, hunch
 
 # ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
 
@@ -724,6 +751,14 @@ LEXICON TVerbRoot
 хна:х{ʼ}на        # to grease
 куз:куз           # to take out
 зу:з{ь}у          # to wash
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #!!! Certain Sakhalin words !!!
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ва:ва       	    # to (apply a) bandage
+ғузун:ғузун       # to nauseate
+ғул:ғул           # to cut, slice, carve
+ёӽт:ёӽт           # to heal, treat
+ёӽтн:ёӽтн           # to heal, treat
 
 LEXICON IVerbRoot
 пʼры:п{ʼ}ры       # to come
@@ -769,13 +804,16 @@ LEXICON IVerbRoot
 к’лу:к{’}лу     # to be afraid
 вуквук:вуквук   # to be dark
 малғо:малғо     # to be much; a lot
-
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#!!! Certain Sakhalin words !!!
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #!!! Certain Sakhalin words !!!
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 т’а:т{ʼ}а 	    # to breathe
-
+ва:ва       	  # to fight (one another / with someone)
+кесӄо:кесӄо     # to burn oneself, get burned
+к’е:к{’}е       # to be skinny, thin, haggard
+ӄо:ӄо           # болеть (to be sick or to hurt?)
+муйву:муйву     # to be sick
+полм:полм       # to be blind
 
 LEXICON IrregBoundVerbRoot
 ни:ни           # to eat

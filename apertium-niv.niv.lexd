@@ -121,7 +121,7 @@
 #!!!                          L E X I C O N                                  !!!
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON NounRoot
+LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labelled with '! Amur' are NOT.
 умгу:умгу           # woman
 ытык:ытык           # father
 ӄан:ӄан             # doggo
@@ -135,7 +135,7 @@ LEXICON NounRoot
 курӈ:курӈ           # universe
 тяӄо:{Ч}{ь}аӄо      # knife
 оола:оола           # child
-чатьф:{Ч}{ь}атьф  # bog, swamp
+чатьф:{Ч}{ь}атьф    # bog, swamp
 ыф:ы{ф}             # beard
 арф:ар{ф}           # side of boat
 му:му               # boat
@@ -214,9 +214,6 @@ LEXICON NounRoot
 ымык:ымык           # mother
 ӄʼах:ӄ{ʼ}ах         # spear
 ӄʼотр:ӄ{ʼ}отр       # bear
-        #!!!!!!!!!!!!!!!!!
-        #!!! New words !!!
-        #!!!!!!!!!!!!!!!!!
 тавӻай:тавӻай       # crab
 вынь:вынь           # kettle
 туӈ:туӈ             # sea lion
@@ -305,9 +302,8 @@ LEXICON NounRoot
 ки:ки               # footwear
 ӄʼоӻа:ӄ{ʼ}оӻа       # nature
 утку:утку           # husband
-    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    #!!! Certain Sakhalin words !!!
-    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON NounRoot-Sakh
 ванивӈ:ванивӈ       # warrior, soldier
 вер̌кинивӈ:вер̌кинивӈ # seller
 вонӈ:вонӈ           # inhabitant, villager
@@ -475,6 +471,7 @@ LEXICON NounRoot
 орӈоӽт:орӈоӽт       # medicinal rhizome of an edible grass
 оӽт:оӽт             # medicine
 поку:поку           # hump, hunch
+вань:вань           # kettle
 
 # ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
 
@@ -482,24 +479,28 @@ ALIAS NounRoot NounRoot2
 
 LEXICON NUMBER
 <sg>:>
-<pl>:>{Г}у
+<pl>:>{Г}у        # Dial/Amur
+<pl>:>{Г}ун       # Dial/Sakh
 
-LEXICON CASES
+LEXICON CASES            # Amur for now (pretty similar in Sakhalin)
 <nom>:>              # Nominative
-<age>:>{a}ӽ          # Agentive
+<age>:>{a}ӽ          # Agentive     ! Dial/Amur
+<comp>:>{y}к         # Comparative  ! Dial/Amur
+<abl>:>{u}х          # Ablative     ! Dial/Sakh
 <dat>:>{R}оӽ         # Dative
-<dat>:>{R}ӽ          # Dir/LR
-<ins>:>{G}ир         # Instrumental
-<loc>:>{u}{j}н       # Locative
-<abl>:>{u}х          # Ablative
+ <dat>:>{R}ӽ          # Dir/LR
 <term>:>{R}оӻо       # Terminative
-<term>:>{T}{ʼ}ыкы    # Dir/LR
-<term>:>{T}{ʼ}{X}а   # Dir/LR
-<comp>:>{y}к         # Comparative
-<voc>:>{V}           # Vocative
-# INCORPORATE-N ;    # Nominative
+ <term>:>{T}{ʼ}ыкы    # Dir/LR
+ <term>:>{T}{ʼ}{X}а   # Dir/LR
+<ins>:>{G}ир         # Instrumental
+<loc>:>{u}{j}н       # Locative     ! just Amur?
+<voc>:>{V}           # Vocative     ! just Amur?
 
-LEXICON CLITICS
+<age>:>аӽ            # Agentive     ! Dial/Sakh
+<comp>:>ак           # Comparative  ! Dial/Sakh
+<abl>:>ух            # Ablative     ! Dial/Sakh
+
+LEXICON CLITICS             # Amur for now
 <qst>:>ла            # Y/N questions
 <emph>:>{R}и         # intensifying particle 'even'
 <emph>:>ӿагин        # intensifying particle 'even'
@@ -508,7 +509,7 @@ LEXICON CLITICS
 <part>:>ӿайра        # 'probably'
 <itg_pej>:>ӿата      # used with an interrogative word, expresses displeasure/disapproval
 
-LEXICON POSSESSION
+LEXICON POSSESSION          # Amur for now
 <px1sg>:нь>          # 1sg
 <px2sg>:ч>           # 2sg
 <px3sg>:{и}>         # 3sg
@@ -537,6 +538,8 @@ NounStem NUMBER CASES CLITICS
 NounStem Comp NounRoot2 [<n>:]
 NounStem Comp NounRoot2 [<n>:] CLITICS
 
+# I'm sure there are better ways to do this
+
 NounStem Comp VerbStem
 NounStem Comp VerbStem TENSE
 NounStem Comp VerbStem TENSE NonFinite SubjAgree
@@ -546,7 +549,7 @@ NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CASES
 NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CASES CLITICS
 
 
-LEXICON ProperNounRoot
+LEXICON ProperNounRoot      # Maybe this should be the same for both dialects?
 Рум<ant><m>:Рум         # dude called Rum
 Иисус<ant><m>:Иисус     # Jesus
 
@@ -560,7 +563,7 @@ IndefPronRoot [<prn><indef>:]
 DemPronRoot [<prn><dem>:]
 IntPronRoot [<prn><int>:]
 
-LEXICON PersPronRoot
+LEXICON PersPronRoot      # Amur for now
 ни<p1><sg>:ни               # I
 чи<p2><sg>:чи               # you
 иф<p3><sg>:{и}{f}           # he, she, it
@@ -571,18 +574,18 @@ LEXICON PersPronRoot
 имӈ<p3><pl>:имӈ             # they
 пʼи<refl>:пʼи               # oneself
 
-LEXICON IndefPronRoot
+LEXICON IndefPronRoot     # Amur for now
 ӿуӈрыдь:ӿуӈрыдь  # something like this
 
-LEXICON DemPronRoot
+LEXICON DemPronRoot       # Amur for now
 тыдь:тыдь        # this (one)
 ӿыдь:ӿыдь        # that (one)
 адь:адь          # that (one)
 
-LEXICON IntPronRoot
+LEXICON IntPronRoot       # Amur for now
 аӈ:аӈ            # who
 
-LEXICON DeterminerRoot
+LEXICON DeterminerRoot    # Amur for now
 ӿы:ӿы            # that
 ты:ты            # this
 
@@ -590,9 +593,7 @@ PATTERNS
 PronounStem CASES CLITICS
 DeterminerRoot [<det><dem>:] Comp NounRoot [<n>:]
 
-# Numbers don't work right now
-
-LEXICON NumeralRoot      # Sakhalin numbers
+LEXICON NumeralRoot-Sakh
 ненӈ<num><cl1>:ненӈ      # one person             yes
 ненӈ<num><cl2>:нян       # one animal or fish     yes
 ненӈ<num><cl3>:няӄр̌      # one object             no
@@ -698,15 +699,7 @@ NumeralRoot
 NumeralRoot
 NumeralRoot Comp NounRoot [<n>:]
 
-# Numbers don't work right now
-
-#LEXICON VerbRoot
-#TVerbRoot
-#IVerbRoot
-#IVerb-AdvRoot
-#IrregFreeVerbRoot
-
-LEXICON TVerbRoot
+LEXICON TVerbRoot-Amur
 за:з{ь}а         # to beat, strike
 во:во            # to take
 даю:даю          # to write
@@ -738,9 +731,6 @@ LEXICON TVerbRoot
 эзму:эзму        # to love
 уски:уски        # to pay for
 эски:эски        # to sell
-        #!!!!!!!!!!!!!!!!!
-        #!!! New words !!!
-        #!!!!!!!!!!!!!!!!!
 ӿеть:ӿеть         # to take out (of)
 нот:нот           # to feed
 кʼрығры:к{ʼ}рығры # to serve, attend to, wait on
@@ -751,16 +741,15 @@ LEXICON TVerbRoot
 хна:х{ʼ}на        # to grease
 куз:куз           # to take out
 зу:з{ь}у          # to wash
-    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    #!!! Certain Sakhalin words !!!
-    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON TVerbRoot-Sakh
 ва:ва       	    # to (apply a) bandage
 ғузун:ғузун       # to nauseate
 ғул:ғул           # to cut, slice, carve
 ёӽт:ёӽт           # to heal, treat
-ёӽтн:ёӽтн           # to heal, treat
+ёӽтн:ёӽтн         # to heal, treat
 
-LEXICON IVerbRoot
+LEXICON IVerbRoot-Amur
 пʼры:п{ʼ}ры       # to come
 му:му             # to die
 чека:чека         # to be strong
@@ -787,9 +776,6 @@ LEXICON IVerbRoot
 ӈар:ӈар           # to be fat
 паӻ:паӻ           # to be red
 эна:эна           # to be another
-        #!!!!!!!!!!!!!!!!!
-        #!!! New words !!!
-        #!!!!!!!!!!!!!!!!!
 нить:нить       # to aim
 энӈаӻз:энӈаӻз   # to be impudent, insolent
 иньғ:иньғ       # to be impudent, insolent
@@ -804,9 +790,8 @@ LEXICON IVerbRoot
 к’лу:к{’}лу     # to be afraid
 вуквук:вуквук   # to be dark
 малғо:малғо     # to be much; a lot
-    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    #!!! Certain Sakhalin words !!!
-    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON IVerbRoot-Sakh
 т’а:т{ʼ}а 	    # to breathe
 ва:ва       	  # to fight (one another / with someone)
 кесӄо:кесӄо     # to burn oneself, get burned

@@ -122,9 +122,9 @@
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labelled with '! Amur' are NOT.
-умгу:умгу           # woman
+умгу:умгу           # woman         ! Amur
 ытык:ытык           # father
-ӄан:ӄан             # doggo
+ӄан:ӄан             # doggo         ! Amur
 ӈа:ӈа               # animal
 тыф:ты{ф}           # house
 ми:ми               # inside
@@ -284,7 +284,6 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 кезӈи:кезӈи         # gland
 микрвыкрук:микрвыкрук  # kidneys
 ӈызрк:ӈызрк         # vein                  ! Amur
-ӈыньф:ӈынь{ф}       # bone
 сусыр:сусыр         # spleen
 тʼвирк:т{ʼ}вирк     # bile
 чылу:чылу           # fog
@@ -367,7 +366,7 @@ LEXICON NounRoot-Sakh
 амх:амх             # mouth
 анғи:анғи           # heel
 аў:аў               # voice
-аф:а{ф)             # moustache, beard
+аф:а{ф}             # moustache, beard
 ух:ух               # nose
 вих:вих             # nose
 илх:илх             # gum(s) (around teeth)
@@ -375,7 +374,7 @@ LEXICON NounRoot-Sakh
 иты:иты             # chin, jaw, jowl
 кыдр:кыдр           # back, spine
 кыр̌:кыр̌             # umbilical cord
-кʼиғуф:к{ʼ}иғу{ф)   # bladder
+кʼиғуф:к{ʼ}иғу{ф}   # bladder
 кʼылмр̌:к{ʼ}ылмр̌     # belly button, navel
 кʼур̌:к{ʼ}ур̌         # gut, intestine
 ӄорӄор̌:ӄорӄор̌       # throat
@@ -384,13 +383,13 @@ LEXICON NounRoot-Sakh
 нос:нос 	          # ear
 мла:мла 	          # ear
 мыньк:мыньк         # breast (woman's)
-нетф:нет{ф)         # face
+нетф:нет{ф}         # face
 ӈыньк:ӈыньк         # face
 оск:оск             # face
 ниви:ниви           # birthmark
 нисаӽ:нисаӽ         # tear (from eye)
 носых:носых         # earlobe
-няӽ:няӽ 	          # eye, (pair of) eyes    ! plural is multiple pairs of eyes)
+няӽ:няӽ 	          # eye, (pair of) eyes    ! plural is multiple pairs of eyes
 ӈазл:ӈазл           # foot; sole
 ӈағс:ӈағс           # tooth
 ӈағзыр̌:ӈағзыр̌       # tooth
@@ -405,8 +404,8 @@ LEXICON NounRoot-Sakh
 ӈалр̌:ӈалр̌           # kidney
 ӈамх:ӈамх           # hair, fur, wool, pile (in the hair sense)
 ӈаньғыф:ӈаньғы{ф}   # bone
-ӈаньғф:ӈаньғ{ф)     # bone
-ӈарғыр̌:ӈарғы{ф)     # chest
+ӈаньғф:ӈаньғ{ф}     # DIR/LR
+ӈарғыр̌:ӈарғы{ф}     # chest
 ӈар̌ӄи:ӈар̌ӄи         # epidermal ridges (those rounded lines on your fingertip)
 ӈаски:ӈаски         # backbone, spine; (mountain) ridge; ceiling beam
 ӈатьх:ӈатьх         # foot, paw (also foot of a thing, like a table)
@@ -472,10 +471,12 @@ LEXICON NounRoot-Sakh
 оӽт:оӽт             # medicine
 поку:поку           # hump, hunch
 вань:вань           # kettle
+ӄанӈ:ӄанӈ           # doggo
 
 # ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
 
-ALIAS NounRoot NounRoot2
+ALIAS NounRoot-Amur NounRoot2
+ALIAS NounRoot-Amur NounRoot
 
 LEXICON NUMBER
 <sg>:>
@@ -694,6 +695,8 @@ LEXICON NumeralRoot-Sakh
 
 тʼуму<num><cl1>:т{ʼ}уму     # one million people
 
+ALIAS NumeralRoot-Sakh NumeralRoot
+
 PATTERNS
 NumeralRoot
 NumeralRoot
@@ -805,6 +808,12 @@ LEXICON IrregBoundVerbRoot
 
 LEXICON IrregFreeVerbRoot
 инь:инь         # to eat
+
+ALIAS TVerbRoot-Amur TVerbRoot
+ALIAS TVerbRoot-Sakh TVerbRoot
+
+ALIAS IVerbRoot-Amur IVerbRoot
+ALIAS IVerbRoot-Sakh IVerbRoot
 
 LEXICON TENSE
 <fut>:>ны

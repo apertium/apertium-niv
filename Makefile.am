@@ -5,8 +5,8 @@
 RELEASE=0.1
 VERSION=0.1.0
 LANG1=niv
-VARIETY1=Amur # Amur Nivkh
-VARIETY2=Sakh # Sakhalin Nivkh
+VARIETY1=Amur# Amur Nivkh
+VARIETY2=Sakh# Sakhalin Nivkh
 LANG1VARIETY1=$(LANG1)@$(VARIETY1)
 LANG1VARIETY2=$(LANG1)@$(VARIETY2)
 
@@ -111,17 +111,17 @@ SHELL = /bin/bash -o pipefail
 #.deps/$(LANG1).LR.hfst: .deps/$(LANG1).LR.lexd.hfst .deps/$(LANG1).twol.hfst
 #	hfst-compose-intersect -1 .deps/$(LANG1).LR.lexd.hfst -2 .deps/$(LANG1).twol.hfst | hfst-minimise -o $@
 
-.deps/$(LANG1VARIETY1).RL.hfst: .deps/$(LANG1VARIETY1).RL.lexd.hfst .deps/$(LANG1VARIETY1).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1VARIETY1).RL.lexd.hfst -2 .deps/$(LANG1VARIETY1).twol.hfst -o $@
+.deps/$(LANG1VARIETY1).RL.hfst: .deps/$(LANG1VARIETY1).RL.lexd.hfst .deps/$(LANG1).twol.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1VARIETY1).RL.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
 
-.deps/$(LANG1VARIETY1).LR.hfst: .deps/$(LANG1VARIETY1).LR.lexd.hfst .deps/$(LANG1VARIETY1).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1VARIETY1).LR.lexd.hfst -2 .deps/$(LANG1VARIETY1).twol.hfst | hfst-minimise -o $@
+.deps/$(LANG1VARIETY1).LR.hfst: .deps/$(LANG1VARIETY1).LR.lexd.hfst .deps/$(LANG1).twol.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1VARIETY1).LR.lexd.hfst -2 .deps/$(LANG1).twol.hfst | hfst-minimise -o $@
 
-.deps/$(LANG1VARIETY2).RL.hfst: .deps/$(LANG1VARIETY2).RL.lexd.hfst .deps/$(LANG1VARIETY2).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1VARIETY2).RL.lexd.hfst -2 .deps/$(LANG1VARIETY2).twol.hfst -o $@
+.deps/$(LANG1VARIETY2).RL.hfst: .deps/$(LANG1VARIETY2).RL.lexd.hfst .deps/$(LANG1).twol.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1VARIETY2).RL.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
 
-.deps/$(LANG1VARIETY2).LR.hfst: .deps/$(LANG1VARIETY2).LR.lexd.hfst .deps/$(LANG1VARIETY2).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1VARIETY2).LR.lexd.hfst -2 .deps/$(LANG1VARIETY2).twol.hfst | hfst-minimise -o $@
+.deps/$(LANG1VARIETY2).LR.hfst: .deps/$(LANG1VARIETY2).LR.lexd.hfst .deps/$(LANG1).twol.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1VARIETY2).LR.lexd.hfst -2 .deps/$(LANG1).twol.hfst | hfst-minimise -o $@
 
 
 #.deps/$(LANG1).RL.lexc.hfst: .deps/$(LANG1).RL.lexc
@@ -142,13 +142,19 @@ $(LANG1VARIETY2).autogen.hfst: .deps/$(LANG1VARIETY2).RL.hfst
 #$(LANG1).automorf.hfst: .deps/$(LANG1).LR.hfst .deps/$(LANG1).spellrelax.hfst
 #	hfst-compose-intersect -1 $< -2 .deps/$(LANG1).spellrelax.hfst | hfst-invert | hfst-minimise | hfst-fst2fst -O -o $@
 
-$(LANG1VARIETY1).automorf.hfst: .deps/$(LANG1VARIETY1).LR.hfst .deps/$(LANG1VARIETY1).spellrelax.hfst
-	hfst-compose-intersect -1 $< -2 .deps/$(LANG1VARIETY1).spellrelax.hfst | hfst-invert | hfst-minimise | hfst-fst2fst -O -o $@
+.deps/$(LANG1VARIETY1).automorf.hfst: .deps/$(LANG1VARIETY1).LR.hfst .deps/$(LANG1).spellrelax.hfst
+	hfst-compose-intersect -1 $< -2 .deps/$(LANG1).spellrelax.hfst | hfst-invert | hfst-minimise -o $@
 
-$(LANG1VARIETY2).automorf.hfst: .deps/$(LANG1VARIETY2).LR.hfst .deps/$(LANG1VARIETY2).spellrelax.hfst
-	hfst-compose-intersect -1 $< -2 .deps/$(LANG1VARIETY2).spellrelax.hfst | hfst-invert | hfst-minimise | hfst-fst2fst -O -o $@
+.deps/$(LANG1VARIETY2).automorf.hfst: .deps/$(LANG1VARIETY2).LR.hfst .deps/$(LANG1).spellrelax.hfst
+	hfst-compose-intersect -1 $< -2 .deps/$(LANG1).spellrelax.hfst | hfst-invert | hfst-minimise -o $@
 
-$(LANG1).automorf.hfst: $(LANG1VARIETY1).automorf.hfst $(LANG1VARIETY2).automorf.hfst
+$(LANG1VARIETY1).automorf.hfst: .deps/$(LANG1VARIETY1).automorf.hfst
+	hfst-fst2fst $< -O -o $@
+
+$(LANG1VARIETY2).automorf.hfst: .deps/$(LANG1VARIETY2).automorf.hfst
+	hfst-fst2fst $< -O -o $@
+
+$(LANG1).automorf.hfst: .deps/$(LANG1VARIETY1).automorf.hfst .deps/$(LANG1VARIETY2).automorf.hfst
 	hfst-concatenate -1 $< -2 `echo $(word 2,$^)` -o $@
 
 #$(LANG1).autogen.att.gz: $(LANG1).autogen.hfst

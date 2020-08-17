@@ -554,14 +554,15 @@ NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CLITICS
 NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CASES
 NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CASES CLITICS
 
-
-LEXICON ProperNounRoot      # Maybe this should be the same for both dialects?
+LEXICON ProperNounRoot-Amur      # Dial/Amur
 Рум<ant><m>:Рум         # dude called Rum
 Иисус<ant><m>:Иисус     # Jesus
 
+PATTERN ProperNounStem
+ProperNounRoot-Amur     # Dial/Amur
+
 PATTERNS
-# ProperNounRoot [<np>:]
-ProperNounRoot [<np>:] CASES
+ProperNounStem [<np>:] CASES
 
 PATTERN PronounStem
 PersPronStem [<prn><pers>:]

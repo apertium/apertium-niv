@@ -43,14 +43,17 @@ Consonant = Б В Г Ӷ Ғ Ӻ Д Ж З Й К Ӄ Л М Н Ӈ П Р Р̌ С Т Ф 
 
 Sonorant = н ӈ м л ;
 
+! A = Пʼ Тʼ Ч Кʼ Ӄʼ
+!     пʼ тʼ ч кʼ ӄʼ ;
+
 A1 = Ф Р С Х Ӽ
      ф р с х ӽ ;
 
 A1a = Ф Р С Ӽ
       ф р с ӽ ;
 
-B = П Т Ч К Ӄ
-    п т ч к ӄ ;
+B = П Т Т К Ӄ
+    п т т к ӄ ;
 
 B1 = В Р З Ғ Ӻ
      в р з ғ ӻ ;
@@ -66,6 +69,10 @@ VoicelessC = К Ӄ П Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
 
 
 Rules
+
+"Set ч to с where A goes to A1"
+ч:с <=> [:B | :C | :Sonorant (:ь) | :й | :Vowel ] +:0 (:0) _ ;
+
 
 "Set %{Ч%} to т everywhere except where it becomes з, с, or д"
 %{Ч%}:т <=> _ ;
@@ -91,26 +98,29 @@ Rules
 
 ! Agentive case
 "Remove /a/ after vowel-ending stem"
-%{a%}:0 <=> :Vowel (%{f%}:) (%>:) (:0) _ ;
+%{a%}:0 <=> :Vowel (%>:) (:0) _ ;
 
 
 ! Locative and Ablative cases
 "Remove /u/ after vowel-ending stem"
-%{u%}:0 <=> :Vowel (%{f%}:) (%>:) (:0) _ ;
+%{u%}:0 <=> :Vowel (%>:) (:0) _ ;
 
 
 ! Locative case -- why isn't it working?????
 "Remove /j/ after /i/"
-%{j%}:0 <=> и (%>:) {u}:0 _ ;
+%{j%}:0 <=> :и (%>:) %{u%}:0 _ ;
 
 
 ! Comparative case
 "Remove /ɤ/ after vowel-ending stem"
 %{y%}:0 <=> :Vowel (%>:) (:0) _ ;
 
+
+! Why?
 "Remove /f/ before another stem"
 %{f%}:0 <=> _ %>: ;
 
+! Iotating
 "Set %{и%} to ю before у"
 %{и%}:ю <=> _ (%{f%}:) %>: [ у: | %{u%}: ] ;
 
@@ -143,13 +153,14 @@ Rules
 "Delete ё after о"
 о:0 <=> %{и%}:ё (%{f%}:) %>: _ ;
 
+
 "Remove soft sign archiphoneme in some places"
 %{ь%}:0 <=> [ :з | :З ] _ ;
             _ :Vowel ;
             except
               [ :н | :т | :д ] _ :ы ;
 
-"Remove real soft sign in those places"
+"Remove real soft sign before vowels"
 ь:0 <=> _ (%>:) :Vowel ;
           except
           _ (%>:) :ы ;
@@ -177,6 +188,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 "Add /a/ after consonant at morpheme boundary"
 %{V%}:а <=> :Consonant (%>:) (:0) _ ;
 
+! For instrumental case
 "Set /G/ to <ғ> after stops and vowels"
 %{G%}:ғ <=> [ :B | :Vowel ] (ь:) (%>:) (:0) _ ;
 
@@ -186,6 +198,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 "Set /G/ to <к> after voiceless fricatives"
 %{G%}:к <=> :A1a (: ̌) (%>:) (:0) _ ;
 
+! For plurals
 "Set /Г/ to <ғ> after voiced stops"
 %{Г%}:ғ <=> :C (ь:) %>: _ ;
 
@@ -195,6 +208,8 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 "Set /Г/ to <к> after voiceless fricatives"
 %{Г%}:к <=> :A1a (: ̌) %>: _ ;
 
+
+! For potential mood
 "Set /Q/ to <ӻ> after voiced stops"
 %{Q%}:ӻ <=> :C (ь:) %>: _ ;
 
@@ -202,7 +217,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 %{Q%}:ӽ <=> :B (ь:) %>: _ ;
 
 
-! Dative case
+! For dative case
 "Set /R/ to <т> after fricatives"
 %{R%}:т <=> [ :A1 (: ̌) | :B1 ] (%>:) (:0) _ ;
 
@@ -213,28 +228,28 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 "Set /B/ to <п> after fricatives"
 %{B%}:п <=> [ :A1 (: ̌) | :B1 ] (%>:) _ ;
 
-"Set /B/ to <б> after sonorants"      ! the 'except' includes р when it should include р̌
+"Set /B/ to <б> after sonorants"  ! the 'except' includes р when it should include р̌
 %{B%}:б <=> [ :Sonorant | :Vowel ] (%>:) _ ;
         except
           _ (:0) :A1  ;
 
-"Change B1 to B for verbs"
+"Change B1 to B"
 Cx:Cy <=> :A1 (: ̌) (%>:) _ ;
           where Cx in B1
                 Cy in B
           matched ;
 
-"Change B1 to C for verbs"
+"Change B1 to C"
 Cx:Cy <=> :Sonorant (:0) (%>:) _ ;
           where Cx in B1
                 Cy in C
           matched ;
 ! Sometimes doesn't change in this context
 
-"Change B to B1 for nouns"
+! Very confused by this rule
+"Change B to B1"
 Cx:Cy <=> [ :й | :Sonorant ] :B1 _ ;
             :н :ь (%>:) _ ;
-            ! :ʼ (%>:) _ ;
       except
             _ :ʼ ;
             :ʼ (%>:) _ ;
@@ -251,16 +266,16 @@ Cx:Cy <=> [ :й | :Sonorant ] :B1 _ ;
   !              Cy in C
   !        matched ;
 
-"Change B to C for nouns: update"
+"Change B to C: update"
 Cx:Cy <=> [ :Vowel | :Sonorant] +:0 (:0) _ ;
       except
-            _ :ʼ ;
+            _ [ :ʼ | ʼ: ] ;
       where Cx in B
             Cy in C
       matched ;
 
 "Change A to A1 after B: update"
-Cx:Cy <=> [ :B ] +:0 (:0) _ :ʼ ;
+Cx:Cy <=> [ :B | :й | :Vowel ] +:0 (:0) _ :ʼ ;
       where Cx in B
             Cy in A1
       matched ;
@@ -296,6 +311,8 @@ Cx:Cy <=> :A1 (: ̌) +:0 (%>:) _ ;
 
 "Keep <ʼ> after B to turn it into correspondent A"
 %{ʼ%}:ʼ <=> :B _  ;
+        except
+            :ч _ ;
 
 "Devoice /z/ after certain aspirates for nouns"
 ч:с <=> [ :ч | :п ]  (:ʼ) (%>:) _ ;

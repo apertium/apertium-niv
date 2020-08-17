@@ -126,16 +126,16 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 ытык:ытык           # father
 ӄан:ӄан             # doggo         ! Amur
 ӈа:ӈа               # animal
-тыф:ты{ф}           # house
+тыф:ты{ф}           # house         ! Amur
 ми:ми               # inside
-нивх:нив{х}         # person, man
+нивх:нив{х}         # person        ! Amur
 ваӄа:ваӄа           # box
 сета:сета           # sugar
 ойдам:ойдам         # baby
 курӈ:курӈ           # universe
 тяӄо:{Ч}{ь}аӄо      # knife
-оола:оола           # child
-чатьф:{Ч}{ь}атьф    # bog, swamp
+оола:оола           # child         ! Amur
+чатьф:чатьф      # bog, swamp
 ыф:ы{ф}             # beard
 арф:ар{ф}           # side of boat
 му:му               # boat
@@ -152,7 +152,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 кинс:кинс           # devil
 во:во               # village
 кʼеӄ:к{ʼ}еӄ         # fox
-чеврӄ:ч{ь}еврӄ      # bird
+чеврӄ:чеврӄ      # bird
 тупр̌:тупр̌           # feather
 тюс:тюс             # meat
 мулк:мулк           # basket
@@ -168,7 +168,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 ӿеӄрӈа:ӿеӄрӈа       # place further from shore (than here)
 лумр:лумр           # sable
 ӿонтӄ:ӿонтӄ         # sack
-ӿемар:ӿемар         # old man
+ӿемар:ӿемар         # old man         ! Amur
 паӽ:паӽ             # stone, rock
 толф:тол{ф}         # summer
 ма:ма               # dried fish
@@ -177,7 +177,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 кʼеӈ:к{ʼ}еӈ         # sun
 ӈыньк:ӈыньк 	      # face
 ӈайн:ӈайн 	        # cheek
-т’ыр:т{’}ыр         # left (not right)
+тʼыр:т{ʼ}ыр         # left (not right)
 ӈир:ӈир 	          # right (not left)
 ӈамадь:ӈамадь       # skin
 няӽ:няӽ 	          # eye
@@ -191,7 +191,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 ньхыр:ньхыр 	      # eyebrow
 ыӈг:ыӈг 	          # mouth            ! Amur
 ӈығс:ӈығс 	        # tooth            ! Amur
-эмс:эмс 	          # molar
+эмс:эмс 	          # molar            ! means 'tooth' in Sakhalin
 ӈыньф:ӈынь{ф} 	    # bone             ! Amur
 ывлх:ывлх 	        # lip              ! Amur
 ити:ити 	          # chin             ! Amur
@@ -207,7 +207,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 пых:пых             # cuckoo
 топин:топин         # jay
 тʼом:т{ʼ}ом         # fat
-мур:мур             # horse
+мур:мур             # horse            ! Amur
 чо:чо               # fish
 чӽа:чӽа             # money
 кʼнык:кʼнык         # promontory
@@ -270,7 +270,6 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 архыск:архыск       # cat (male)
 олоӈ:олоӈ           # pig, hog, swine
 арэӻа:арэӻа         # bull, ox
-мур:мур             # horse
 армур:армур         # stallion
 чӈыр:чӈыр           # hay
 мус:мус             # oats
@@ -472,22 +471,26 @@ LEXICON NounRoot-Sakh
 поку:поку           # hump, hunch
 вань:вань           # kettle
 ӄанӈ:ӄанӈ           # doggo
+таф:та{ф}           # house
+ӿаймӈар̌:ӿаймӈар̌     # old man
+мурӈ:мурӈ           # horse
+чо:чо               # fish
 
 # ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
 
 ALIAS NounRoot-Amur NounRoot2
-ALIAS NounRoot-Amur NounRoot
+ALIAS NounRoot-Sakh NounRoot2
 
 LEXICON NUMBER
 <sg>:>
 <pl>:>{Г}у        # Dial/Amur
 <pl>:>{Г}ун       # Dial/Sakh
 
-LEXICON CASES            # Amur for now (pretty similar in Sakhalin)
+LEXICON CASES
 <nom>:>              # Nominative
 <age>:>{a}ӽ          # Agentive     ! Dial/Amur
 <comp>:>{y}к         # Comparative  ! Dial/Amur
-<abl>:>{u}х          # Ablative     ! Dial/Sakh
+<abl>:>{u}х          # Ablative     ! Dial/Amur
 <dat>:>{R}оӽ         # Dative
  <dat>:>{R}ӽ          # Dir/LR
 <term>:>{R}оӻо       # Terminative
@@ -525,10 +528,12 @@ LEXICON Comp
 +:
 
 PATTERN Possession
-:POSSESSION NounRoot [<n>:] POSSESSION:
+:POSSESSION NounRoot-Amur [<n>:] POSSESSION:    # Dial/Amur
+:POSSESSION NounRoot-Sakh [<n>:] POSSESSION:    # Dial/Sakh
 
 PATTERN NounStem
-NounRoot [<n>:]
+NounRoot-Amur [<n>:]        # Dial/Amur
+NounRoot-Sakh [<n>:]        # Dial/Sakh
 Possession
 Possession Comp NounRoot2 [<n>:]
 
@@ -559,12 +564,11 @@ PATTERNS
 ProperNounRoot [<np>:] CASES
 
 PATTERN PronounStem
-PersPronRoot [<prn><pers>:]
-IndefPronRoot [<prn><indef>:]
-DemPronRoot [<prn><dem>:]
-IntPronRoot [<prn><int>:]
+PersPronStem [<prn><pers>:]
+IndefPronStem [<prn><indef>:]
+IntPronStem [<prn><int>:]
 
-LEXICON PersPronRoot      # Amur for now
+LEXICON PersPronRoot-Amur   # Dial/Amur
 ни<p1><sg>:ни               # I
 чи<p2><sg>:чи               # you
 иф<p3><sg>:{и}{f}           # he, she, it
@@ -575,26 +579,65 @@ LEXICON PersPronRoot      # Amur for now
 имӈ<p3><pl>:имӈ             # they
 пʼи<refl>:пʼи               # oneself
 
-LEXICON IndefPronRoot     # Amur for now
+LEXICON PersPronRoot-Sakh   # Dial/Sakh
+ни<p1><sg>:ни               # I
+чи<p2><sg>:чи               # you
+яӈ<p3><sg>:яӈ               # he, she, it
+нин<p1><pl><excl>:нин       # they and I
+мин<p1><pl><incl>:мин       # y'all and I
+меӈ<p1><du>:меӈ             # you and I
+чин<p2><pl>:чин             # y'all
+ин<p3><pl>:ин               # they
+пʼи<refl>:пʼи               # oneself
+
+PATTERN PersPronStem
+PersPronRoot-Amur      #Dial/Amur
+PersPronRoot-Sakh      #Dial/Sakh
+
+LEXICON IndefPronRoot-Amur     # Dial/Amur
 ӿуӈрыдь:ӿуӈрыдь  # something like this
 
-LEXICON DemPronRoot       # Amur for now
-тыдь:тыдь        # this (one)
-ӿыдь:ӿыдь        # that (one)
-адь:адь          # that (one)
+LEXICON IndefPronRoot-Sakh     # Dial/Sakh
+сык:сык          # everything, everyone
 
-LEXICON IntPronRoot       # Amur for now
+PATTERN IndefPronStem
+IndefPronRoot-Amur      #Dial/Amur
+IndefPronRoot-Sakh      #Dial/Sakh
+
+# LEXICON DemPronRoot       # Amur for now
+ # тыдь:тыдь        # this (one)
+ # ӿыдь:ӿыдь        # that (one)
+ # адь:адь          # that (one)
+
+LEXICON IntPronRoot-Amur       # Dial/Amur
 аӈ:аӈ            # who
 
-LEXICON DeterminerRoot    # Amur for now
+LEXICON IntPronRoot-Sakh       # Dial/Sakh
+нар̌:нар̌          # who
+
+PATTERN IntPronStem
+IntPronRoot-Amur      #Dial/Amur
+IntPronRoot-Sakh      #Dial/Sakh
+
+LEXICON DeterminerRoot-Amur    # Dial/Amur
 ӿы:ӿы            # that
 ты:ты            # this
 
+LEXICON DeterminerRoot-Sakh    #Dial/Sakh
+ӿуд:ӿуд          # that
+
+PATTERN DeterminerStem
+DeterminerRoot-Amur      #Dial/Amur
+DeterminerRoot-Sakh      #Dial/Sakh
+
 PATTERNS
 PronounStem CASES CLITICS
-DeterminerRoot [<det><dem>:] Comp NounRoot [<n>:]
+DeterminerStem [<det><dem>:] Comp NounRoot2 [<n>:]
 
-LEXICON NumeralRoot-Sakh
+LEXICON NumeralRoot-Amur    #Dial/Amur
+нин<num><cl1>:нин        # one person
+
+LEXICON NumeralRoot-Sakh    #Dial/Sakh
 ненӈ<num><cl1>:ненӈ      # one person             yes
 ненӈ<num><cl2>:нян       # one animal or fish     yes
 ненӈ<num><cl3>:няӄр̌      # one object             no
@@ -695,12 +738,13 @@ LEXICON NumeralRoot-Sakh
 
 тʼуму<num><cl1>:т{ʼ}уму     # one million people
 
-ALIAS NumeralRoot-Sakh NumeralRoot
+PATTERN NumeralStem
+NumeralRoot-Amur      #Dial/Amur
+NumeralRoot-Sakh      #Dial/Sakh
 
 PATTERNS
-NumeralRoot
-NumeralRoot
-NumeralRoot Comp NounRoot [<n>:]
+NumeralStem
+NumeralStem Comp NounRoot2 [<n>:]
 
 LEXICON TVerbRoot-Amur
 за:з{ь}а         # to beat, strike
@@ -809,12 +853,6 @@ LEXICON IrregBoundVerbRoot
 LEXICON IrregFreeVerbRoot
 инь:инь         # to eat
 
-ALIAS TVerbRoot-Amur TVerbRoot
-ALIAS TVerbRoot-Sakh TVerbRoot
-
-ALIAS IVerbRoot-Amur IVerbRoot
-ALIAS IVerbRoot-Sakh IVerbRoot
-
 LEXICON TENSE
 <fut>:>ны
 <nonfut>:>
@@ -842,8 +880,10 @@ LEXICON MOOD
 # %<imp%>:%>idk
 
 PATTERN VerbStem
-TVerbRoot [<v>:] [<tv>:]
-IVerbRoot [<v>:] [<iv>:]
+TVerbRoot-Amur [<v>:] [<tv>:]   #Dial/Amur
+IVerbRoot-Amur [<v>:] [<iv>:]   #Dial/Amur
+TVerbRoot-Sakh [<v>:] [<tv>:]   #Dial/Sakh
+IVerbRoot-Sakh [<v>:] [<iv>:]   #Dial/Sakh
 
 PATTERNS
 VerbStem

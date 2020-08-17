@@ -19,10 +19,11 @@ TARGETS_COMMON =			\
 	$(LANG1).automorf.bin		\
 	$(LANG1VARIETY1).automorf.bin \
 	$(LANG1VARIETY2).automorf.bin \
-	#$(LANG1).autogen.hfst		\
+	$(LANG1).automorf.att.gz		\
+	$(LANG1VARIETY1).automorf.att.gz \
+	$(LANG1VARIETY2).automorf.att.gz \
 	$(LANG1VARIETY1).autogen.hfst \
 	$(LANG1VARIETY2).autogen.hfst \
-	#$(LANG1).autogen.bin		\
 	$(LANG1VARIETY1).autogen.bin \
 	$(LANG1VARIETY2).autogen.bin \
 	$(LANG1).autopgen.bin		\
@@ -46,10 +47,10 @@ SHELL = /bin/bash -o pipefail
 #	cat $< | grep -v 'Dir/RL' > $@
 
 .deps/$(LANG1VARIETY1).lexd: $(BASENAME).$(LANG1).lexd .deps/.d
-	cat $< | grep -v 'Dir/$(VARIETY1)' > $@
+	cat $< | grep -v 'Dir/$(VARIETY2)' > $@
 
 .deps/$(LANG1VARIETY2).lexd: $(BASENAME).$(LANG1).lexd .deps/.d
-	cat $< | grep -v 'Dir/$(VARIETY2)' > $@
+	cat $< | grep -v 'Dir/$(VARIETY1)' > $@
 
 .deps/$(LANG1VARIETY1).RL.lexd: .deps/$(LANG1VARIETY1).lexd .deps/.d
 	cat $< | grep -v 'Dir/LR' > $@

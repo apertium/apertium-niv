@@ -403,7 +403,7 @@ LEXICON NounRoot-Sakh
 ӈалр̌:ӈалр̌           # kidney
 ӈамх:ӈамх           # hair, fur, wool, pile (in the hair sense)
 ӈаньғыф:ӈаньғы{ф}   # bone
-ӈаньғф:ӈаньғ{ф}     # DIR/LR
+ӈаньғф:ӈаньғ{ф}     # Dir/LR
 ӈарғыр̌:ӈарғы{ф}     # chest
 ӈар̌ӄи:ӈар̌ӄи         # epidermal ridges (those rounded lines on your fingertip)
 ӈаски:ӈаски         # backbone, spine; (mountain) ridge; ceiling beam
@@ -657,7 +657,7 @@ LEXICON NumeralRoot-Sakh    #Dial/Sakh
 ненӈ<num><cl16>:ньла     # one pole
 ненӈ<num><cl17>:нявр     # one place
 ненӈ<num><cl18>:ньвасӄ   # one paired object
-ненӈ<num><cl18>:пасӄ     # DIR/LR one paired object
+ненӈ<num><cl18>:пасӄ     # Dir/LR one paired object
 ненӈ<num><cl19>:неть     # one cedar, spruce, or fir plank
 ненӈ<num><cl20>:ньрах    # one flat object
 ненӈ<num><cl21>:нех      # one long object
@@ -666,7 +666,7 @@ LEXICON NumeralRoot-Sakh    #Dial/Sakh
 
 менӈ<num><cl1>:менӈ       # two people            yes
 менӈ<num><cl2>:мар̌        # two animals           no
-менӈ<num><cl2>:мор̌        # DIR/LR two animals    no
+менӈ<num><cl2>:мор̌        # Dir/LR two animals    no
 менӈ<num><cl3>:меӄр̌       # two objects           no
 
 тяӄр̌<num><cl1>:тяӄр̌       # three people          no
@@ -694,7 +694,7 @@ LEXICON NumeralRoot-Sakh    #Dial/Sakh
 
 мӽоӈ<num><cl1>:мӽоӈ      # ten people           yes
 мӽоӈ<num><cl2>:мӽос      # ten animals          yes
-мӽоӈ<num><cl2>:мӽоӈ      # DIR/LR ten animals   yes
+мӽоӈ<num><cl2>:мӽоӈ      # Dir/LR ten animals   yes
 мӽоӈ<num><cl3>:мӽоӄр̌     # ten objects          no
 
 # How to do 11-19?
@@ -731,7 +731,7 @@ LEXICON NumeralRoot-Sakh    #Dial/Sakh
 
 минр̌аӈӷ<num><cl1>:минр̌аӈӷ   # eight hundred people
 
-минрр̌аӈӷ<num><cl1>:минрр̌аӈӷ # DIR/LR eight hundred people
+минрр̌аӈӷ<num><cl1>:минрр̌аӈӷ # Dir/LR eight hundred people
 
 няндорӈр̌аӈӷ<num><cl1>:няндорӈр̌аӈӷ # nine hundred people
 

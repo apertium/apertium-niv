@@ -14,11 +14,15 @@ BASENAME=apertium-$(LANG1)
 
 TARGETS_COMMON =			\
 	$(LANG1).automorf.hfst		\
+	$(LANG1VARIETY1).automorf.hfst \
+	$(LANG1VARIETY2).automorf.hfst \
 	$(LANG1).automorf.bin		\
-	$(LANG1).autogen.hfst		\
+	$(LANG1VARIETY1).automorf.bin \
+	$(LANG1VARIETY2).automorf.bin \
+	#$(LANG1).autogen.hfst		\
 	$(LANG1VARIETY1).autogen.hfst \
 	$(LANG1VARIETY2).autogen.hfst \
-	$(LANG1).autogen.bin		\
+	#$(LANG1).autogen.bin		\
 	$(LANG1VARIETY1).autogen.bin \
 	$(LANG1VARIETY2).autogen.bin \
 	$(LANG1).autopgen.bin		\
@@ -160,7 +164,19 @@ $(LANG1).automorf.hfst: .deps/$(LANG1VARIETY1).automorf.hfst .deps/$(LANG1VARIET
 #$(LANG1).autogen.att.gz: $(LANG1).autogen.hfst
 #	hfst-fst2txt $< | gzip -9 -c -n > $@
 
+$(LANG1VARIETY1).autogen.att.gz: $(LANG1VARIETY1).autogen.hfst
+	hfst-fst2txt $< | gzip -9 -c -n > $@
+
+$(LANG1VARIETY2).autogen.att.gz: $(LANG1VARIETY2).autogen.hfst
+	hfst-fst2txt $< | gzip -9 -c -n > $@
+
 $(LANG1).automorf.att.gz: $(LANG1).automorf.hfst
+	hfst-fst2txt $< | gzip -9 -c -n > $@
+
+$(LANG1VARIETY1).automorf.att.gz: $(LANG1VARIETY1).automorf.hfst
+	hfst-fst2txt $< | gzip -9 -c -n > $@
+
+$(LANG1VARIETY2).automorf.att.gz: $(LANG1VARIETY2).automorf.hfst
 	hfst-fst2txt $< | gzip -9 -c -n > $@
 
 #$(LANG1).autogen.bin: $(LANG1).autogen.att.gz .deps/.d
@@ -178,6 +194,14 @@ $(LANG1VARIETY2).autogen.bin: $(LANG1VARIETY2).autogen.att.gz .deps/.d
 $(LANG1).automorf.bin: $(LANG1).automorf.att.gz .deps/.d
 	zcat < $< > .deps/$(LANG1).automorf.att
 	lt-comp lr .deps/$(LANG1).automorf.att $@
+
+$(LANG1VARIETY1).automorf.bin: $(LANG1VARIETY1).automorf.att.gz .deps/.d
+	zcat < $< > .deps/$(LANG1VARIETY1).automorf.att
+	lt-comp lr .deps/$(LANG1VARIETY1).automorf.att $@
+
+$(LANG1VARIETY2).automorf.bin: $(LANG1VARIETY2).automorf.att.gz .deps/.d
+	zcat < $< > .deps/$(LANG1VARIETY2).automorf.att
+	lt-comp lr .deps/$(LANG1VARIETY2).automorf.att $@
 
 $(LANG1).autopgen.bin: $(BASENAME).post-$(LANG1).dix
 	lt-comp lr $< $@

@@ -554,12 +554,16 @@ NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CLITICS
 NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CASES
 NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CASES CLITICS
 
-LEXICON ProperNounRoot-Amur      # Dial/Amur
+LEXICON ProperNounRoot-Amur
 Рум<ant><m>:Рум         # dude called Rum
 Иисус<ant><m>:Иисус     # Jesus
 
+LEXICON ProperNounRoot-Sakh
+Людмила<ant><f>:Людмила    # Lyudmila
+
 PATTERN ProperNounStem
 ProperNounRoot-Amur     # Dial/Amur
+ProperNounRoot-Sakh     # Dial/Sakh
 
 PATTERNS
 ProperNounStem [<np>:] CASES
@@ -569,7 +573,7 @@ PersPronStem [<prn><pers>:]
 IndefPronStem [<prn><indef>:]
 IntPronStem [<prn><int>:]
 
-LEXICON PersPronRoot-Amur   # Dial/Amur
+LEXICON PersPronRoot-Amur
 ни<p1><sg>:ни               # I
 чи<p2><sg>:чи               # you
 иф<p3><sg>:{и}{f}           # he, she, it
@@ -580,7 +584,7 @@ LEXICON PersPronRoot-Amur   # Dial/Amur
 имӈ<p3><pl>:имӈ             # they
 пʼи<refl>:пʼи               # oneself
 
-LEXICON PersPronRoot-Sakh   # Dial/Sakh
+LEXICON PersPronRoot-Sakh
 ни<p1><sg>:ни               # I
 чи<p2><sg>:чи               # you
 яӈ<p3><sg>:яӈ               # he, she, it
@@ -595,10 +599,10 @@ PATTERN PersPronStem
 PersPronRoot-Amur      #Dial/Amur
 PersPronRoot-Sakh      #Dial/Sakh
 
-LEXICON IndefPronRoot-Amur     # Dial/Amur
+LEXICON IndefPronRoot-Amur
 ӿуӈрыдь:ӿуӈрыдь  # something like this
 
-LEXICON IndefPronRoot-Sakh     # Dial/Sakh
+LEXICON IndefPronRoot-Sakh
 сык:сык          # everything, everyone
 
 PATTERN IndefPronStem
@@ -610,21 +614,21 @@ IndefPronRoot-Sakh      #Dial/Sakh
  # ӿыдь:ӿыдь        # that (one)
  # адь:адь          # that (one)
 
-LEXICON IntPronRoot-Amur       # Dial/Amur
+LEXICON IntPronRoot-Amur
 аӈ:аӈ            # who
 
-LEXICON IntPronRoot-Sakh       # Dial/Sakh
+LEXICON IntPronRoot-Sakh
 нар̌:нар̌          # who
 
 PATTERN IntPronStem
 IntPronRoot-Amur      #Dial/Amur
 IntPronRoot-Sakh      #Dial/Sakh
 
-LEXICON DeterminerRoot-Amur    # Dial/Amur
+LEXICON DeterminerRoot-Amur
 ӿы:ӿы            # that
 ты:ты            # this
 
-LEXICON DeterminerRoot-Sakh    #Dial/Sakh
+LEXICON DeterminerRoot-Sakh
 ӿуд:ӿуд          # that
 
 PATTERN DeterminerStem
@@ -635,10 +639,10 @@ PATTERNS
 PronounStem CASES CLITICS
 DeterminerStem [<det><dem>:] Comp NounRoot2 [<n>:]
 
-LEXICON NumeralRoot-Amur    #Dial/Amur
+LEXICON NumeralRoot-Amur
 нин<num><cl1>:нин        # one person
 
-LEXICON NumeralRoot-Sakh    #Dial/Sakh
+LEXICON NumeralRoot-Sakh
 ненӈ<num><cl1>:ненӈ      # one person             yes
 ненӈ<num><cl2>:нян       # one animal or fish     yes
 ненӈ<num><cl3>:няӄр̌      # one object             no

@@ -46,26 +46,26 @@ Sonorant = н ӈ м л ;
 ! A = Пʼ Тʼ Ч Кʼ Ӄʼ
 !     пʼ тʼ ч кʼ ӄʼ ;
 
-A1 = Ф Р С Х Ӽ
-     ф р с х ӽ ;
+A1 = Ф Р Х Ӽ
+     ф р х ӽ ;
 
 A1a = Ф Р С Ӽ
       ф р с ӽ ;
 
-B = П Т Т К Ӄ
-    п т т к ӄ ;
+B = П Т К Ӄ
+    п т к ӄ ;
 
-B1 = В Р З Ғ Ӻ
-     в р з ғ ӻ ;
+B1 = В Р Ғ Ӻ
+     в р ғ ӻ ;
 
-C = Б Д Д Г Ӷ
-    б д д г ӷ ;
+C = Б Д Г Ӷ
+    б д г ӷ ;
 
 Sibilant = З С
            з с ;
 
-VoicelessC = К Ӄ П Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
-             к ӄ п р̌ с т ф х ӽ ӿ ц ч ш щ ;
+VoicelessC = К Ӄ П С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
+             к ӄ п с т ф х ӽ ӿ ц ч ш щ ;
 
 
 Rules
@@ -78,7 +78,7 @@ Rules
 %{Ч%}:т <=> _ ;
       except
       [ :Vowel | :Sonorant] +:0 (:0) _ ;
-      [ :й | :Sonorant ] :B1 _ ;
+      [ :й | :Sonorant ] [ :B1 | :з ] _ ;
       :н :ь (%>:) _ ;
       ! :ʼ (%>:) _ ;
       [ :ч | :п ] (:ʼ) (%>:) _ ;
@@ -87,7 +87,7 @@ Rules
 %{Ч%}:д <=> [ :Vowel | :Sonorant] +:0 (:0) _ ;
 
 "Change %{Ч%} to з where B goes to B1"
-%{Ч%}:з <=> [ :й | :Sonorant ] :B1 _ ;
+%{Ч%}:з <=> [ :й | :Sonorant ] [ :B1 | :з ]  _ ;
             :н :ь (%>:) _ ;
             ! :ʼ (%>:) _ ;
       except
@@ -116,7 +116,7 @@ Rules
 %{y%}:0 <=> :Vowel (%>:) (:0) _ ;
 
 
-! Why?
+! For иф
 "Remove /f/ before another stem"
 %{f%}:0 <=> _ %>: ;
 
@@ -219,14 +219,14 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 
 ! For dative case
 "Set /R/ to <т> after fricatives"
-%{R%}:т <=> [ :A1 (: ̌) | :B1 ] (%>:) (:0) _ ;
+%{R%}:т <=> [ :A1 (: ̌) | :с | :B1 | :з ] (%>:) (:0) _ ;
 
 "Set /R/ to <д> after sonorants"
 %{R%}:д <=> :Sonorant (%>:) (:0) _ ;
 
 
 "Set /B/ to <п> after fricatives"
-%{B%}:п <=> [ :A1 (: ̌) | :B1 ] (%>:) _ ;
+%{B%}:п <=> [ :A1 (: ̌) | :B1 | :с | :з ] (%>:) _ ;
 
 "Set /B/ to <б> after sonorants"  ! the 'except' includes р when it should include р̌
 %{B%}:б <=> [ :Sonorant | :Vowel ] (%>:) _ ;
@@ -234,7 +234,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
           _ (:0) :A1  ;
 
 "Change B1 to B"
-Cx:Cy <=> :A1 (: ̌) (%>:) _ ;
+Cx:Cy <=> [:A1 (: ̌) | :с ] (%>:) _ ;
           where Cx in B1
                 Cy in B
           matched ;
@@ -247,27 +247,19 @@ Cx:Cy <=> :Sonorant (:0) (%>:) _ ;
 ! Sometimes doesn't change in this context
 
 ! Very confused by this rule
-"Change B to B1"
-Cx:Cy <=> [ :й | :Sonorant ] :B1 _ ;
-            :н :ь (%>:) _ ;
-      except
-            _ :ʼ ;
-            :ʼ (%>:) _ ;
-            .#. _ ;
-      where Cx in B
-            Cy in B1
-      matched ;
-
-!  "Change B to C for nouns"
-  !  Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>: %{n%}:0 _ ;
-  !        except
-  !              _ :ʼ ;
-  !        where Cx in B
-  !              Cy in C
-  !        matched ;
+  !"Change B to B1"
+  !Cx:Cy <=> [ :й | :Sonorant ] :B1 _ ;
+  !            :н :ь (%>:) _ ;
+  !      except
+  !            _ :ʼ ;
+  !            :ʼ (%>:) _ ;
+  !            .#. _ ;
+  !      where Cx in B
+  !            Cy in B1
+  !      matched ;
 
 "Change B to C: update"
-Cx:Cy <=> [ :Vowel | :Sonorant] +:0 (:0) _ ;
+Cx:Cy <=> :Sonorant +:0 (:0) _ ;
       except
             _ [ :ʼ | ʼ: ] ;
       where Cx in B
@@ -275,34 +267,28 @@ Cx:Cy <=> [ :Vowel | :Sonorant] +:0 (:0) _ ;
       matched ;
 
 "Change A to A1 after B: update"
-Cx:Cy <=> [ :B | :й | :Vowel ] +:0 (:0) _ :ʼ ;
+Cx:Cy <=> [ :B (ь:) | :й | :Vowel ] +:0 (:0) _ :ʼ ;
       where Cx in B
             Cy in A1
       matched ;
 
-"Change B to B1 after B: update"
-Cx:Cy <=> [ :B ] +:0 (:0) _ ;
+"Change B to B1: update"
+Cx:Cy <=> [ :B (:ь) | :C (:ь) | :й | :Vowel ] +:0 (:0) _ ;
       where Cx in B
             Cy in B1
       matched ;
 
-! "Change A to A1 for nouns"
-  ! Cx:Cy <=> :Vowel [ :B | :д ] (:0) _ ;
-  !      where Cx in B
-  !            Cy in A1
-  !      matched ;
-
 "Change A1 to B"
-Cx:Cy <=> :A1 (: ̌) +:0 (%>:) _ ;
+Cx:Cy <=> [ :A1 (: ̌) | :с ] +:0 (%>:) _ ;
           :Sonorant +:0 (%>:) _ ;
-          :B1 +:0 (%>:) _ ;
+          [ :B1 | :з ] +:0 (%>:) _ ;
       where Cx in A1
             Cy in B
       matched ;
-! Sometimes doesn't change after sonorants
+! Changes only optionally after sonorants
 
 "Delete <ʼ> after A1"
-%{ʼ%}:0 <=> :A1 (%>:) _ ;
+%{ʼ%}:0 <=> [ :A1 | :с ] (%>:) _ ;
         except
             :р _ ;
 
@@ -311,17 +297,16 @@ Cx:Cy <=> :A1 (: ̌) +:0 (%>:) _ ;
 
 "Keep <ʼ> after B to turn it into correspondent A"
 %{ʼ%}:ʼ <=> :B _  ;
-        except
-            :ч _ ;
+
 
 "Devoice /z/ after certain aspirates for nouns"
-ч:с <=> [ :ч | :п ]  (:ʼ) (%>:) _ ;
+ч:с <=> [ :ч | :п :ʼ ] (%>:) _ ;
 
 "Devoice /z/ after certain aspirates for verbs"
-з:с <=> [ :ч | :п ]  (:ʼ) (%>:) _ ;
+з:с <=> [ :ч | :п :ʼ ] (%>:) _ ;
 
 "Devoice /d/ after voiceless consonants"
-%{д%}:т <=> :VoicelessC %>: _ ;
+%{д%}:т <=> [ :VoicelessC | : ̌ ] (%>:) (:0) _ ;
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol

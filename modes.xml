@@ -19,6 +19,23 @@
     </pipeline>
   </mode>
 
+  <mode name="niv_Amur-morph" install="yes">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="niv@Amur.automorf.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="niv_Sakh-morph" install="yes">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="niv@Sakh.automorf.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
   <mode name="niv-lexc" install="yes">
     <pipeline>
       <program name="hfst-lookup">
@@ -34,6 +51,23 @@
       </program>
     </pipeline>
   </mode>
+
+  <mode name="niv_Amur-gener" install="yes">
+    <pipeline>
+      <program name="lt-proc -g">
+        <file name="niv@Amur.autogen.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="niv_Sakh-gener" install="yes">
+    <pipeline>
+      <program name="lt-proc -g">
+        <file name="niv@Sakh.autogen.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
 
   <mode name="niv-tagger" install="yes">
     <pipeline>

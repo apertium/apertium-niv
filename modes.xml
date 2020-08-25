@@ -36,18 +36,18 @@
   </mode>
 
 
-  <mode name="niv_Amur-lexc" install="yes">
+  <mode name="niv_Amur-lexd" install="yes">
     <pipeline>
       <program name="hfst-lookup">
-        <file name=".deps/niv@Amur.LR.lexc.hfst"/>
+        <file name=".deps/niv@Amur.LR.lexd.hfst"/>
       </program>
     </pipeline>
   </mode>
 
-  <mode name="niv_Sakh-lexc" install="yes">
+  <mode name="niv_Sakh-lexd" install="yes">
     <pipeline>
       <program name="hfst-lookup">
-        <file name=".deps/niv@Sakh.LR.lexc.hfst"/>
+        <file name=".deps/niv@Sakh.LR.lexd.hfst"/>
       </program>
     </pipeline>
   </mode>

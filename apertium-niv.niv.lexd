@@ -525,7 +525,7 @@ LEXICON POSSESSION          # Amur for now
 <pxref>:пʼ>          # refl
 
 LEXICON Comp
-+:
++:>
 
 PATTERN Possession
 :POSSESSION NounRoot-Amur [<n>:] POSSESSION:    # Dial/Amur

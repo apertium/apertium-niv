@@ -7,32 +7,32 @@ Config:
 Tests:
   "[lexd] possessed noun with ть/з/дь/с":
     тяӄо<n><sg><nom> : тяӄо
-    тяӄо<n><px1sg><sg><nom> : ньзаӄо
+    тяӄо<n><px1sg><sg><nom> : ньдяӄо
     тяӄо<n><px2sg><sg><nom> : чсаӄо
-    тяӄо<n><px3sg><sg><nom> : идяӄо
+    тяӄо<n><px3sg><sg><nom> : изаӄо
 
   "[lexd] possessed noun with т/р/д/р̌":
     туӈ<n><sg><nom> : туӈ
-    туӈ<n><px1sg><sg><nom> : ньруӈ
+    туӈ<n><px1sg><sg><nom> : ньдуӈ
     туӈ<n><px2sg><sg><nom> : чр̌уӈ      # maybe this should be р
-    туӈ<n><px3sg><sg><nom> : идуӈ
+    туӈ<n><px3sg><sg><nom> : ируӈ
 
   "[lexd] possessed noun with тʼ/р̌":
     тʼом<n><sg><nom> : тʼом
     тʼом<n><px1sg><sg><nom> : ньтʼом
-    тʼом<n><px1sg><sg><nom> : ньр̌ом
+  #  тʼом<n><px1sg><sg><nom> : ньр̌ом       this is also acceptable
     тʼом<n><px2sg><sg><nom> : чр̌ом
-    тʼом<n><px3sg><sg><nom> : исом
+    тʼом<n><px3sg><sg><nom> : ир̌ом
 
   "[lexd] possessed noun with ч/с 1":
     чатьф<n><sg><nom> : чатьф
-    чатьф<n><px1sg><sg><nom> : ньсатьф
+    чатьф<n><px1sg><sg><nom> : ньчатьф
     чатьф<n><px2sg><sg><nom> : чсатьф
     чатьф<n><px3sg><sg><nom> : исатьф
 
   "[lexd] possessed noun with ч/с 2":
     чеврӄ<n><sg><nom> : чеврӄ
-    чеврӄ<n><px1sg><sg><nom> : ньсеврӄ
+    чеврӄ<n><px1sg><sg><nom> : ньчеврӄ
     чеврӄ<n><px2sg><sg><nom> : чсеврӄ
     чеврӄ<n><px3sg><sg><nom> : исеврӄ
 

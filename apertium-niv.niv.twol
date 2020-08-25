@@ -38,8 +38,8 @@ IotatingVowels = А О У Э
 IotatedVowels = Я Ё Ю Е
                 я ё ю е ;
 
-Consonant = Б В Г Ӷ Ғ Ӻ Д Ж З Й К Ӄ Л М Н Ӈ П Р Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
-            б в г ӷ ғ ӻ д ж з й к ӄ л м н ӈ п р р̌ с т ф х ӽ ӿ ц ч ш щ ;
+Consonant = Б В Г Ӷ Ғ Ӻ Д Ж З Й К Ӄ Л М Н Ӈ П Р С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
+            б в г ӷ ғ ӻ д ж з й к ӄ л м н ӈ п р с т ф х ӽ ӿ ц ч ш щ ;
 
 Sonorant = н ӈ м л ;
 
@@ -71,29 +71,22 @@ VoicelessC = К Ӄ П С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
 Rules
 
 "Set ч to с where A goes to A1"
-ч:с <=> [:B | :C | :Sonorant (:ь) | :й | :Vowel ] +:0 (:0) _ ;
+ч:с <=> [:B | :C | :й | :Vowel ] +:0 (:0) _ ;
+! Optionally also changes after nasals (or at least after н and ӈ)
 
 
 "Set %{Ч%} to т everywhere except where it becomes з, с, or д"
 %{Ч%}:т <=> _ ;
       except
-      [ :Vowel | :Sonorant] +:0 (:0) _ ;
-      [ :й | :Sonorant ] [ :B1 | :з ] _ ;
-      :н :ь (%>:) _ ;
-      ! :ʼ (%>:) _ ;
-      [ :ч | :п ] (:ʼ) (%>:) _ ;
+      :Sonorant (:ь) +:0 (:0) _ ;                    ! where it goes to д
+      [ :й | :Vowel | :B | :C | :Sibilant ]  _ ;     ! where it goes to з
+      [ :ч | :п ] (:ʼ) (%>:) _ ;                     ! where it goes to с
 
 "Change %{Ч%} to д where B goes to C"
-%{Ч%}:д <=> [ :Vowel | :Sonorant] +:0 (:0) _ ;
+%{Ч%}:д <=> :Sonorant (:ь) +:0 (:0) _ ;
 
 "Change %{Ч%} to з where B goes to B1"
-%{Ч%}:з <=> [ :й | :Sonorant ] [ :B1 | :з ]  _ ;
-            :н :ь (%>:) _ ;
-            ! :ʼ (%>:) _ ;
-      except
-            _ :ʼ ;
-            :ʼ (%>:) _ ;
-            .#. _ ;
+%{Ч%}:з <=> [ :й | :Vowel | :B | :C | :Sibilant ]  _ ;
 
 
 ! Agentive case
@@ -266,17 +259,20 @@ Cx:Cy <=> :Sonorant +:0 (:0) _ ;
             Cy in C
       matched ;
 
-"Change A to A1 after B: update"
-Cx:Cy <=> [ :B (ь:) | :й | :Vowel ] +:0 (:0) _ :ʼ ;
+"Change A to A1: update"
+Cx:Cy <=> [ :B (:ь) | :C (:ь) | :ч | :й | :Vowel ] +:0 (:0) _ :ʼ ;
       where Cx in B
             Cy in A1
       matched ;
 
-"Change B to B1: update"
-Cx:Cy <=> [ :B (:ь) | :C (:ь) | :й | :Vowel ] +:0 (:0) _ ;
-      where Cx in B
-            Cy in B1
-      matched ;
+!"Change B to B1: update"
+!Cx:Cy <=> [ :B (:ь) | :C (:ь) | :й | :Vowel ] +:0 (:0) _ \:ʼ ;
+!      where Cx in B
+!            Cy in B1
+!      matched ;
+
+"Test"
+п:в <=> :Vowel +:0 (:0)  _ \:ʼ ;
 
 "Change A1 to B"
 Cx:Cy <=> [ :A1 (: ̌) | :с ] +:0 (%>:) _ ;

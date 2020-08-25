@@ -133,9 +133,9 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 сета:сета           # sugar
 ойдам:ойдам         # baby
 курӈ:курӈ           # universe
-тяӄо:{Ч}{ь}аӄо      # knife
+тяӄо:{Ч}{ь}аӄо      # knife              ! TEST - good
 оола:оола           # child         ! Amur
-чатьф:чатьф      # bog, swamp
+чатьф:чатьф         # bog, swamp         ! TEST - looks good
 ыф:ы{ф}             # beard
 арф:ар{ф}           # side of boat
 му:му               # boat
@@ -154,7 +154,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 кʼеӄ:к{ʼ}еӄ         # fox
 чеврӄ:чеврӄ      # bird
 тупр̌:тупр̌           # feather
-тюс:тюс             # meat
+тюс:{Ч}{ь}ус        # meat               ! TEST - good
 мулк:мулк           # basket
 ӈояӄ:ӈояӄ           # egg
 ӄʼас:ӄ{ʼ}ас         # tambourine
@@ -170,14 +170,14 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 ӿонтӄ:ӿонтӄ         # sack
 ӿемар:ӿемар         # old man         ! Amur
 паӽ:паӽ             # stone, rock
-толф:тол{ф}         # summer
+толф:тол{ф}         # summer             ! TEST - bad: no change after nasal or ч
 ма:ма               # dried fish
 питғы:питғы         # paper (written), book
 пон:пон             # villager
 кʼеӈ:к{ʼ}еӈ         # sun
 ӈыньк:ӈыньк 	      # face
 ӈайн:ӈайн 	        # cheek
-тʼыр:т{ʼ}ыр         # left (not right)
+тʼыр:т{ʼ}ыр         # left (not right)   ! TEST - bad: no change after ч
 ӈир:ӈир 	          # right (not left)
 ӈамадь:ӈамадь       # skin
 няӽ:няӽ 	          # eye
@@ -478,8 +478,8 @@ LEXICON NounRoot-Sakh
 
 # ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
 
-ALIAS NounRoot-Amur NounRoot2
-ALIAS NounRoot-Sakh NounRoot2
+ALIAS NounRoot-Amur NounRoot-Amur2
+ALIAS NounRoot-Sakh NounRoot-Sakh2
 
 LEXICON NUMBER
 <sg>:>
@@ -535,14 +535,18 @@ PATTERN NounStem
 NounRoot-Amur [<n>:]        # Dial/Amur
 NounRoot-Sakh [<n>:]        # Dial/Sakh
 Possession
-Possession Comp NounRoot2 [<n>:]
+Possession Comp NounRoot-Amur [<n>:]      #Dial/Amur
+Possession Comp NounRoot-Sakh [<n>:]      #Dial/Sakh
 
 PATTERNS
 NounStem NUMBER CASES
 NounStem NUMBER CASES CLITICS
 
-NounStem Comp NounRoot2 [<n>:]
-NounStem Comp NounRoot2 [<n>:] CLITICS
+NounStem Comp NounRoot-Amur2 [<n>:] NUMBER CASES          #Dial/Amur
+NounStem Comp NounRoot-Amur2 [<n>:] NUMBER CASES CLITICS  #Dial/Amur
+
+NounStem Comp NounRoot-Sakh2 [<n>:] NUMBER CASES          #Dial/Sakh
+NounStem Comp NounRoot-Sakh2 [<n>:] NUMBER CASES CLITICS  #Dial/Sakh
 
 # I'm sure there are better ways to do this
 
@@ -550,9 +554,11 @@ NounStem Comp VerbStem
 NounStem Comp VerbStem TENSE
 NounStem Comp VerbStem TENSE NonFinite SubjAgree
 NounStem Comp VerbStem TENSE MOOD
-NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CLITICS
-NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CASES
-NounStem Comp VerbStem Comp NounRoot2 [<n>:] NUMBER CASES CLITICS
+NounStem Comp VerbStem Comp NounRoot-Amur2 [<n>:] NUMBER CASES            #Dial/Amur
+NounStem Comp VerbStem Comp NounRoot-Amur2 [<n>:] NUMBER CASES CLITICS    #Dial/Amur
+
+NounStem Comp VerbStem Comp NounRoot-Sakh2 [<n>:] NUMBER CASES            #Dial/Sakh
+NounStem Comp VerbStem Comp NounRoot-Sakh2 [<n>:] NUMBER CASES CLITICS    #Dial/Sakh
 
 LEXICON ProperNounRoot-Amur
 Рум<ant><m>:Рум         # dude called Rum
@@ -637,7 +643,8 @@ DeterminerRoot-Sakh      #Dial/Sakh
 
 PATTERNS
 PronounStem CASES CLITICS
-DeterminerStem [<det><dem>:] Comp NounRoot2 [<n>:]
+DeterminerStem [<det><dem>:] Comp NounRoot-Amur2 [<n>:]     #Dial/Amur
+DeterminerStem [<det><dem>:] Comp NounRoot-Sakh2 [<n>:]     #Dial/Sakh
 
 LEXICON NumeralRoot-Amur
 нин<num><cl1>:нин        # one person
@@ -749,7 +756,8 @@ NumeralRoot-Sakh      #Dial/Sakh
 
 PATTERNS
 NumeralStem
-NumeralStem Comp NounRoot2 [<n>:]
+NumeralStem Comp NounRoot-Amur2 [<n>:]      #Dial/Amur
+NumeralStem Comp NounRoot-Sakh2 [<n>:]      #Dial/Sakh
 
 LEXICON TVerbRoot-Amur
 за:з{ь}а         # to beat, strike
@@ -895,7 +903,8 @@ VerbStem
 VerbStem TENSE
 VerbStem TENSE NonFinite SubjAgree
 VerbStem TENSE MOOD
-VerbStem Comp NounRoot2 [<n>:]
+VerbStem Comp NounRoot-Amur2 [<n>:]     #Dial/Amur
+VerbStem Comp NounRoot-Sakh2 [<n>:]     #Dial/Sakh
 
 # LEXICON IVerb-AdvRoot
 # ур:ур        # well

@@ -239,17 +239,6 @@ Cx:Cy <=> :Sonorant (:0) %>:0 (:0) _ ;
           matched ;
 ! Sometimes doesn't change in this context
 
-! Very confused by this rule
-  !"Change B to B1"
-  !Cx:Cy <=> [ :й | :Sonorant ] :B1 _ ;
-  !            :н :ь (%>:) _ ;
-  !      except
-  !            _ :ʼ ;
-  !            :ʼ (%>:) _ ;
-  !            .#. _ ;
-  !      where Cx in B
-  !            Cy in B1
-  !      matched ;
 
 "Change B to C: update"
 Cx:Cy <=> :Sonorant (:ь) %>:0 (:0) _ ;
@@ -266,15 +255,13 @@ Cx:Cy <=> [ :B (:ь) | :C (:ь) | :ч | :й | :Vowel ] %>:0 (:0) _ :ʼ ;
       matched ;
 
 "Change B to B1: update"
-Cx:Cy <=> [ :B (:ь) | :C (:ь) | :й | :Vowel ] %>:0 (:0) _ \:ʼ ;
+Cx:Cy <=> [ :B (:ь) | :C (:ь) | :ч | :й | :Vowel ] %>:0 (:0) _ \:ʼ ;
       where Cx in B
             Cy in B1
       matched ;
 
-!"Test"
-!п:в <=> :Vowel %>:0 (:0) _ \:ʼ ;
 
-"Change A1 to B"
+"Change A1 to B"    !A1 to A?
 Cx:Cy <=> [ :A1 (: ̌) | :с ] %>:0 (:0) _ ;
           :Sonorant %>:0 (:0) _ ;
           [ :B1 | :з ] %>:0 (:0) _ ;

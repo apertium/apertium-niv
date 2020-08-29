@@ -475,6 +475,14 @@ LEXICON NounRoot-Sakh
 ӿаймӈар̌:ӿаймӈар̌     # old man
 мурӈ:мурӈ           # horse
 чо:чо               # fish
+таӽ:таӽ             # epidemic
+тиӈ:тиӈ             # strength
+тыӈз:тыӈз           # weight
+тюкуд:тюкуд         # appearance/manifestation of a food allergy
+тʼый:т{ʼ}ый         # dream
+тʼыф:т{ʼ}ы{ф}       # tumor; swollen place   ! The grammar will generate this, but how to get 'tumor' without listing it separately in the lexicon?
+ӽана:ӽана           # (common) cold, chill
+ӽар̌ӄавф:ӽар̌ӄавф     # abrasion, scrape
 
 # ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
 
@@ -552,6 +560,7 @@ NounStem Comp NounRoot-Sakh2 [<n>:] NUMBER CASES CLITICS  #Dial/Sakh
 
 NounStem Comp VerbStem
 NounStem Comp VerbStem TENSE
+NounStem Comp VerbStem TENSE NonFinite
 NounStem Comp VerbStem TENSE NonFinite SubjAgree
 NounStem Comp VerbStem TENSE MOOD
 NounStem Comp VerbStem Comp NounRoot-Amur2 [<n>:] NUMBER CASES            #Dial/Amur
@@ -635,7 +644,7 @@ LEXICON DeterminerRoot-Amur
 ты:ты            # this
 
 LEXICON DeterminerRoot-Sakh
-ӿуд:ӿуд          # that
+ӿуд:ӿуд          # that         ! maybe it's just ӿу?
 
 PATTERN DeterminerStem
 DeterminerRoot-Amur      #Dial/Amur
@@ -808,6 +817,10 @@ LEXICON TVerbRoot-Sakh
 ғул:ғул           # to cut, slice, carve
 ёӽт:ёӽт           # to heal, treat
 ёӽтн:ёӽтн         # to heal, treat
+р̌ык:р̌{ʼ}ык        # to hug
+тʼӽар̌п:т{ʼ}ӽар̌п   # to forget
+тʼый:т{ʼ}ый       # to dream about    ! Is it transitive? theta roles?
+ӽар̌ӄав:ӽ{ʼ}ар̌ӄав  # to scratch, scrape, itch
 
 LEXICON IVerbRoot-Amur
 пʼры:п{ʼ}ры       # to come
@@ -859,6 +872,16 @@ LEXICON IVerbRoot-Sakh
 ӄо:ӄо           # болеть (to be sick or to hurt?)
 муйву:муйву     # to be sick
 полм:полм       # to be blind
+пу:пу           # to ripen, mature
+п’аӄ:п{’}аӄ     # to get cut
+р̌ык:р̌{ʼ}ык      # to be pregnant
+то:то           # to be fat
+тʼы:т{ʼ}ы       # to swell; to be far away
+урӻар:урӻар      # to recover, get better, improve; live in harmony     ! derived from ур?
+урӈу:урӈу        # to be hungry, to starve
+ӿавай:ӿавай       # to scratch oneself AND/OR to itch (be itchy) -- чесаться
+ӿоклӿокл:ӿоклӿокл  # to limp, to be lame
+чу:чу              # to heal, scar, close up, skin over
 
 LEXICON IrregBoundVerbRoot
 ни:ни           # to eat
@@ -872,11 +895,17 @@ LEXICON TENSE
 
 LEXICON NonFinite
 <inf>:>{R}оӽ
-<cvbnar1>:>
-<cvbnar2>:>{д}ата     # Dir/LR
-<cvbnar2>:>{д}урӈу
-<cvbant>:>ӈан
-<cvbcond>:>ӻа
+
+<cvbnar1>:>                       # ! SubjAgree
+<cvbnar2>:>{д}ата     # Dir/LR      ! SubjAgree
+<cvbnar2>:>{д}урӈу                # ! SubjAgree
+<cvbant>:>ӈан                     # ! no
+<cvbcond>:>ӻа                     # ! idk
+
+<nmzloc>:>{ф}      # place where X happens   ! Apparently voiced in some environments, but idk which
+<nmzadv>:>       # used mostly with case suffixes
+<nmzsubj>:к      # the one who X's
+<nmzpred>:{д}ь   # the X'ing of a thing; that which X's; being X-ness
 
 LEXICON SubjAgree
 <p1><sg>:>т
@@ -888,7 +917,8 @@ LEXICON SubjAgree
 
 LEXICON MOOD
 <itg>:>л
-<ind>:>{д}ь
+<ind>:>{д}ь         #Dial/Amur
+<ind>:>{д}          #Dial/Sakh
 <pot>:>{Q}ана
 # %<imp%>:%>idk
 
@@ -901,6 +931,7 @@ IVerbRoot-Sakh [<v>:] [<iv>:]   #Dial/Sakh
 PATTERNS
 VerbStem
 VerbStem TENSE
+VerbStem TENSE NonFinite
 VerbStem TENSE NonFinite SubjAgree
 VerbStem TENSE MOOD
 VerbStem Comp NounRoot-Amur2 [<n>:]     #Dial/Amur

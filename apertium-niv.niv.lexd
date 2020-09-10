@@ -119,7 +119,7 @@
 
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #!!!                          L E X I C O N                                  !!!
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# hhh ррр !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labelled with '! Amur' are NOT.
 умгу:умгу           # woman         ! Amur
@@ -129,14 +129,14 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 тыф:ты{ф}           # house         ! Amur
 ми:ми               # inside
 нивх:нив{х}         # person        ! Amur
-ваӄа:ваӄа           # box
+ваӄа:ваӄа           # box, trunk, chest
 сета:сета           # sugar
-ойдам:ойдам         # baby
+ойдам:ойдам         # baby          ! Amur
 курӈ:курӈ           # universe
-тяӄо:{Ч}{ь}аӄо      # knife              ! TEST - good
+тяӄо:{Ч}{ь}аӄо      # knife
 оола:оола           # child         ! Amur
-чатьф:чатьф         # bog, swamp         ! TEST - looks good
-ыф:ы{ф}             # beard
+чатьф:чатьф         # bog, swamp
+ыф:ы{ф}             # beard         ! Amur
 арф:ар{ф}           # side of boat
 му:му               # boat
 ӿуньф:ӿунь{ф}       # barrel
@@ -148,13 +148,13 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 пос:пос             # fabric, cloth
 ӈафӄ:ӈафӄ           # friend
 леп:леп             # bread
-ларӄ:ларӄ           # shirt
+лар̌ӄ:лар̌ӄ           # shirt, dress, gown
 кинс:кинс           # devil
 во:во               # village
 кʼеӄ:к{ʼ}еӄ         # fox
-чеврӄ:чеврӄ      # bird
+чеврӄ:чеврӄ         # bird
 тупр̌:тупр̌           # feather
-тюс:{Ч}{ь}ус        # meat               ! TEST - good
+тюс:{Ч}{ь}ус        # meat
 мулк:мулк           # basket
 ӈояӄ:ӈояӄ           # egg
 ӄʼас:ӄ{ʼ}ас         # tambourine
@@ -166,7 +166,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 пыньх:пыньх         # soup
 нё:нё               # barn
 ӿеӄрӈа:ӿеӄрӈа       # place further from shore (than here)
-лумр:лумр           # sable
+лумр̌:лумр̌           # sable
 ӿонтӄ:ӿонтӄ         # sack
 ӿемар:ӿемар         # old man         ! Amur
 паӽ:паӽ             # stone, rock
@@ -200,7 +200,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 кʼуты:к{ʼ}уты       # hole
 керӄ:керӄ           # sea
 пʼирӈыр:п{ʼ}ирӈыр   # sazan (kind of carp)
-теӈи:теӈи           # salmon
+теӈи:теӈи           # salmon           ! {Ч}{ь}?
 ыс:ыс               # owner            ! Amur
 лаӈр:лаӈр           # seal
 ӿыйк:ӿыйк           # hare
@@ -244,7 +244,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 авсӄ:авсӄ           # ruff, ruffe (fish)
 ва:ва               # predatory carp; redfin culter; Chanodichthys erythropterus
 вағс:вағс           # whitefish
-тёмр:тёмр           # grass; leaf
+тёмр:{Ч}{ь}омр      # grass; leaf
 визлых:визлых       # root
 титӈыр:титӈыр       # thorn
 р̌авӈыкс:р̌{ʼ}авӈыкс  # rhododendron
@@ -334,6 +334,7 @@ LEXICON NounRoot-Sakh
 ӈаӈанғк:ӈаӈанғк     # hunter
 ӈарлак:ӈарлак       # fat person, fatty
 ӈафӄр̌аӈӷ:ӈафӄр̌аӈӷ   # female friend
+р̌аӈӷ:р̌аӈӷ           # woman
 орӈар̌:орӈар̌         # Orok, Uilta
 палӈатӈунивӈ:палӈатӈунивӈ # woodsman, forest ranger
 пес:пес             # nurse, nanny
@@ -343,7 +344,7 @@ LEXICON NounRoot-Sakh
 пʼезмулак:п{ʼ}езмулак # egomaniac
 пʼр̌ынивӈ:п{ʼ}р̌ынивӈ # newcomer, stranger
 руғнивӈ:руғнивӈ     # voter, elector; sorter
-тяӈги:тяӈги         # boss
+тяӈги:{Ч}{ь}аӈги    # boss
 тʼаӈрк:т{ʼ}аӈрк     # trickster, dodger (ловкач)
 ӽанивӈ:ӽанивӈ       # shooter, rifleman
 уғмунивӈ:уғмунивӈ   # champion, hero
@@ -423,14 +424,14 @@ LEXICON NounRoot-Sakh
 такань:такань       # fingernail, toenail, claw, talon
 такнь:такнь         # fingernail, toenail, claw, talon
 тамк:тамк           # hand
-тёӈр̌:тёӈр̌           # head
+тёӈр̌:{Ч}{ь}оӈр̌      # head
 тивр̌:тивр̌           # liver
 тоӈӄ:тоӈӄ           # elbow
 тоӈр̌:тоӈр̌           # tendon; twins (a pair of?)
 тот:тот             # forearm
 туньм:туньм         # finger
 тыӈ:тыӈ             # lens (of eye)
-тяви:тяви           # stomach
+тяви:{Ч}{ь}ави      # stomach
 т’а:т{ʼ}а 	        # pate, crown of head
 т’аӻр̌:т{ʼ}аӻр̌       # bridge of nose
 т’аӻр̌:т{ʼ}аӻр̌       # chipmunk              ! should these be listed separately?
@@ -478,21 +479,45 @@ LEXICON NounRoot-Sakh
 таӽ:таӽ             # epidemic
 тиӈ:тиӈ             # strength
 тыӈз:тыӈз           # weight
-тюкуд:тюкуд         # appearance/manifestation of a food allergy
+тюкуд:{Ч}{ь}укуд    # appearance/manifestation of a food allergy
 тʼый:т{ʼ}ый         # dream
 тʼыф:т{ʼ}ы{ф}       # tumor; swollen place   ! The grammar will generate this, but how to get 'tumor' without listing it separately in the lexicon?
 ӽана:ӽана           # (common) cold, chill
 ӽар̌ӄавф:ӽар̌ӄавф     # abrasion, scrape
+ваӄи:ваӄи           # box, trunk, chest
+ваӄей:ваӄей         # Dir/LR
+ваӄай:ваӄай         # Dir/LR
+сета:сета           # sugar
+ойдым:ойдым         # baby
+тяӄо:{Ч}{ь}аӄо      # knife
+эӻлӈ:эӻлӈ            # child
+чатьф:чатьф         # bog, swamp
+му:му               # boat
+аки:аки             # older brother
+атик:атик           # younger sibling
+асӄ:асӄ             # Dir/LR
+нанӽ:нанӽ           # older sister
+атим:атим           # grandmother
+аткытьх:аткытьх     # grandfather
+ӈафӄ:ӈафӄ           # friend
+леп:леп             # bread
+лар̌ӄ:лар̌ӄ           # shirt, dress, gown
+кʼеӄ:к{ʼ}еӄ         # fox
+тур̌:тур̌             # meat
+ӈойӄ:ӈойӄ           # egg
+олӻоӈ:олӻоӈ          # pig, hog, swine
+паньх:паньх         # soup
+оӻроф:оӻро{ф}        # sable
 
-# ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў
+# ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў jjj ооо
 
 ALIAS NounRoot-Amur NounRoot-Amur2
 ALIAS NounRoot-Sakh NounRoot-Sakh2
 
 LEXICON NUMBER
 <sg>:>
-<pl>:>{Г}у        # Dial/Amur
-<pl>:>{Г}ун       # Dial/Sakh
+<pl>:>{Г}у          # Dial/Amur
+<pl>:>{Г}ун         # Dial/Sakh
 
 LEXICON CASES
 <nom>:>              # Nominative

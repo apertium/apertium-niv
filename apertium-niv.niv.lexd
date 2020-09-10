@@ -182,8 +182,8 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 ӈамадь:ӈамадь       # skin
 няӽ:няӽ 	          # eye
 них:них 	          # tear (from eye)
-т’адм:т{ʼ}адм 	    # pate, crown of head        ! see def. in Sakhalin section
-т’а:т{ʼ}а 	        # pate, crown of head
+тʼадм:т{ʼ}адм 	    # pate, crown of head        ! see def. in Sakhalin section
+тʼа:т{ʼ}а 	        # pate, crown of head
 ӿеғми:ӿеғми 	      # temple (of head)
 нос:нос 	          # ear
 мла:мла 	          # earlobe          ! means 'ear' in Sakhalin
@@ -432,15 +432,15 @@ LEXICON NounRoot-Sakh
 туньм:туньм         # finger
 тыӈ:тыӈ             # lens (of eye)
 тяви:{Ч}{ь}ави      # stomach
-т’а:т{ʼ}а 	        # pate, crown of head
-т’аӻр̌:т{ʼ}аӻр̌       # bridge of nose
-т’аӻр̌:т{ʼ}аӻр̌       # chipmunk              ! should these be listed separately?
-т’адм:т{ʼ}адм 	    # top/back of the head, from pate to nape
-т’ах:т{ʼ}ах	        # forehead
-т’у:т{ʼ}у 	        # joint (in body)
-т’у:т{ʼ}у 	        # sled                  ! should these be listed separately?
-т’ыӈ:т{ʼ}ыӈ         # fontanelle (soft spot of baby head)
-т’ытьк:т{ʼ}ытьк     # shin
+тʼа:т{ʼ}а 	        # pate, crown of head
+тʼаӻр̌:т{ʼ}аӻр̌       # bridge of nose
+тʼаӻр̌:т{ʼ}аӻр̌       # chipmunk              ! should these be listed separately?
+тʼадм:т{ʼ}адм 	    # top/back of the head, from pate to nape
+тʼах:т{ʼ}ах	        # forehead
+тʼу:т{ʼ}у 	        # joint (in body)
+тʼу:т{ʼ}у 	        # sled                  ! should these be listed separately?
+тʼыӈ:т{ʼ}ыӈ         # fontanelle (soft spot of baby head)
+тʼытьк:т{ʼ}ытьк     # shin
 ул:ул               # пазуха (sinus? bosom?)
 унь:унь             # waist, pelvis
 ӿаваф:ӿава{ф}       # lungs (a set probably)
@@ -885,20 +885,20 @@ LEXICON IVerbRoot-Amur
 невур:невур     # to be affable, communicable, forthcoming, charming
 ньма:ньма       # to be timid, fearful
 ур:ур           # to be good
-к’лу:к{’}лу     # to be afraid
+кʼлу:к{ʼ}лу     # to be afraid
 вуквук:вуквук   # to be dark
 малғо:малғо     # to be much; a lot
 
 LEXICON IVerbRoot-Sakh
-т’а:т{ʼ}а 	    # to breathe
+тʼа:т{ʼ}а 	    # to breathe
 ва:ва       	  # to fight (one another / with someone)
 кесӄо:кесӄо     # to burn oneself, get burned
-к’е:к{’}е       # to be skinny, thin, haggard
+кʼе:к{ʼ}е       # to be skinny, thin, haggard
 ӄо:ӄо           # болеть (to be sick or to hurt?)
 муйву:муйву     # to be sick
 полм:полм       # to be blind
 пу:пу           # to ripen, mature
-п’аӄ:п{’}аӄ     # to get cut
+пʼаӄ:п{ʼ}аӄ     # to get cut
 р̌ык:р̌{ʼ}ык      # to be pregnant
 то:то           # to be fat
 тʼы:т{ʼ}ы       # to swell; to be far away

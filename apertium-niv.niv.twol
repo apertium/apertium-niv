@@ -193,13 +193,13 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 
 ! For plurals
 "Set /Г/ to <ғ> after voiced stops"
-%{Г%}:ғ <=> :C (ь:) %>: _ ;
+%{Г%}:ғ <=> :C (ь:) (%>:) _ ;
 
 "Set /Г/ to <г> after sonorants and vowels and in the word нивх"
-%{Г%}:г <=> [ :Sonorant | %{х%}: | :Vowel ] %>: _ ;
+%{Г%}:г <=> [ :Sonorant (ь:) | %{х%}: | :Vowel ] (%>:) _ ;
 
 "Set /Г/ to <к> after voiceless fricatives"
-%{Г%}:к <=> :A1a %>: _ ;
+%{Г%}:к <=> :A1a (%>:) _ ;
 
 
 ! For potential mood

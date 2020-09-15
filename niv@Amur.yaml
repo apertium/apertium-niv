@@ -17,6 +17,12 @@ Tests:
     туӈ<n><px2sg><sg><nom> : чр̌уӈ      # maybe this should be р
     туӈ<n><px3sg><sg><nom> : ируӈ
 
+  "[lexd] possessed noun with т/р/д/р̌ 2":
+    толф<n><sg><nom> : толф
+    толф<n><px1sg><sg><nom> : ньдолф
+    толф<n><px2sg><sg><nom> : чр̌олф      # maybe this should be р
+    толф<n><px3sg><sg><nom> : иролф
+
   "[lexd] possessed noun with тʼ/р̌":
     тʼом<n><sg><nom> : тʼом
     тʼом<n><px1sg><sg><nom> : ньтʼом

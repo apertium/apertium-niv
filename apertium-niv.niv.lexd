@@ -170,7 +170,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 ӿонтӄ:ӿонтӄ         # sack
 ӿемар:ӿемар         # old man         ! Amur
 паӽ:паӽ             # stone, rock
-толф:тол{ф}         # summer             ! TEST - bad: no change after nasal or ч
+толф:тол{ф}         # summer
 ма:ма               # dried fish
 питғы:питғы         # paper (written), book
 пон:пон             # villager
@@ -200,9 +200,9 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 кʼуты:к{ʼ}уты       # hole
 керӄ:керӄ           # sea
 пʼирӈыр:п{ʼ}ирӈыр   # sazan (kind of carp)
-теӈи:теӈи           # salmon           ! {Ч}{ь}?
+теӈи:теӈи           # pink salmon      ! {Ч}{ь}?
 ыс:ыс               # owner            ! Amur
-лаӈр:лаӈр           # seal
+лаӈр̌:лаӈр̌           # seal
 ӿыйк:ӿыйк           # hare
 пых:пых             # cuckoo
 топин:топин         # jay
@@ -213,12 +213,11 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 кʼнык:кʼнык         # promontory
 ымык:ымык           # mother
 ӄʼах:ӄ{ʼ}ах         # spear
-ӄʼотр:ӄ{ʼ}отр       # bear
-тавӻай:тавӻай       # crab
+тавӻай:тавӻай        # crab
 вынь:вынь           # kettle
 туӈ:туӈ             # sea lion
-тойғур:тойғур       # seal
-чуғнык:чуғнык       # walrus
+тойғур:тойғур       # seal            ! not in Taksami's dictionary
+чуғных:чуғных       # walrus
 ыс:ыс               # swallow (bird)
 ат:ат               # tiger
 кетул:кетул         # giraffe
@@ -230,12 +229,14 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 лиғзнонӄ:лиғзнонӄ   # wolf cub
 мем:мем             # monkey
 обезьяна:обезьяна   # monkey
-мок:мок             # bear
+ӄʼотр:ӄ{ʼ}отр       # bear        ! Amur
+мок:мок             # bear        ! not in dictionaries
 чхыф:чхы{ф}         # bear
 тотр:тотр           # marten
 тʼоӽ:т{ʼ}оӽ         # moose
-торӄ:торӄ           # badger
-члығи:члығи         # lynx
+тʼорӄ:т{ʼ}орӄ       # badger
+члығи:члығи         # lynx        ! тлығи? тʼлығи?
+тʼлаӈи:т{ʼ}лаӈи     # (rein)deer
 ӈы:ӈы               # otter
 чоӽ:чоӽ             # fang, tusk
 нитьф:нить{ф}       # target
@@ -368,10 +369,10 @@ LEXICON NounRoot-Sakh
 аў:аў               # voice
 аф:а{ф}             # moustache, beard
 ух:ух               # nose
-вих:вих             # nose
+вих:вих             # Dir/LR
 илх:илх             # gum(s) (around teeth)
 илх:илх             # buckskin
-иты:иты             # chin, jaw, jowl
+иты:иты             # chin, jaw, jowl     ! it's ити in the picture book, иты in the blue thematic dictionary
 кыдр:кыдр           # back, spine
 кыр̌:кыр̌             # umbilical cord
 кʼиғуф:к{ʼ}иғу{ф}   # bladder
@@ -392,9 +393,9 @@ LEXICON NounRoot-Sakh
 няӽ:няӽ 	          # eye, (pair of) eyes    ! plural is multiple pairs of eyes
 ӈазл:ӈазл           # foot; sole
 ӈағс:ӈағс           # tooth
-ӈағзыр̌:ӈағзыр̌       # tooth
+ӈағзыр̌:ӈағзыр̌       # Dir/LR
 эмс:эмс             # tooth
-эмз:эмз             # tooth
+эмз:эмз             # Dir/LR
 ӈаӻри:ӈаӻри         # shoulder
 ӈазр̌:ӈазр̌           # vein; skin from an animal's paw; trim on a ski from an animal's paw
 ӈай:ӈай             # thigh, hip
@@ -446,7 +447,7 @@ LEXICON NounRoot-Sakh
 ӿаваф:ӿава{ф}       # lungs (a set probably)
 ӿал:ӿал             # skin (human)
 ӿеғми:ӿеғми 	      # temple (of head)
-ӿеми:ӿеми   	      # temple (of head)
+ӿеми:ӿеми   	      # Dir/LR
 ӿивр̌:ӿивр̌           # back of hand
 ӿилх:ӿилх           # tongue
 ӿут:ӿут             # torso, body; dermis
@@ -508,6 +509,46 @@ LEXICON NounRoot-Sakh
 олӻоӈ:олӻоӈ          # pig, hog, swine
 паньх:паньх         # soup
 оӻроф:оӻро{ф}        # sable
+паӽ:паӽ             # stone, rock
+толф:тол{ф}         # summer
+ма:ма               # dried fish
+кʼеӈ:к{ʼ}еӈ         # sun
+кер̌ӄӈ:кер̌ӄӈ         # sea
+пʼирӈыр̌:п{ʼ}ирӈыр̌   # sazan (kind of carp)
+теӈи:теӈи           # pink salmon      ! {Ч}{ь}?
+чуғӈи:чуғӈи         # walrus
+туӈ:туӈ             # sea lion
+таўғур̌:таўғур̌       # bearded seal
+тавӻай:тавӻай        # crab
+поми:поми           # dolphin
+кʼузр̌:к{ʼ}узр̌       # wolverine
+лаӄр̌:лаӄр̌           # squirrel
+ӿоло:ӿоло           # squirrel
+ӿолу:ӿолу           # Dir/LR
+лиғр̌:лиғр̌           # wolf
+мем:мем             # monkey
+мемӈ:мемӈ           # Dir/LR
+чхыф:чхы{ф}         # bear
+тʼоӽ:т{ʼ}оӽ         # moose
+тʼор̌ӄ:т{ʼ}ор̌ӄ       # badger
+тʼлығи:т{ʼ}лығи     # lynx
+тʼлаӈи:т{ʼ}лаӈи     # (rein)deer
+чоӻ:чоӻ             # fang, tusk
+чоӻ:чоӻ             # flock, herd, pack      ! should these be listed separately?
+авсӄ:авсӄ          # ruff, ruffe (fish)
+ар̌ӄи:ар̌ӄи          # smelt (Osmerus: European smelt, pygmy smelt, rainbow smelt)
+вел:вел            # summer chum/dog salmon (Oncorhynchus keta)
+иўс:иўс            # pike (Esox)
+ӄандё:ӄандё        # whitespotted char (Salvelinus leucomaenis)
+ӄаӈи:ӄаӈи          # navaga; saffron cod (Eleginus)
+лаӄи:лаӄи          # herring (Clupea)
+пасӄи:пасӄи        # бычок - could be: 1) goby - any fish of the family Gobiidae OR 2) sculpin - any fish of the superfamily Cottoidea OR 3) bullhead - any fish of the suborder Scorpaenoidei OR 4) specifically the European bullhead / miller's thumb (Cottus gobio) in the suborder Scorpaenoidei
+лойм:лойм          # trout
+лоӄ:лоӄ            # flatfish: flounder, plaice, or sole
+ласӄ:ласӄ          # бычок-каменушка (what is this?)
+пʼар̌ӄ:п{ʼ}ар̌ӄ      # kaluga (Huso dauricus)
+темраӈ:темраӈ      # rudd (Scardinius)
+
 
 # ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў jjj ооо
 

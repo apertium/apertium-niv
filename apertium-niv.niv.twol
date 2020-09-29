@@ -23,8 +23,8 @@ Alphabet
  %{Ч%}:т %{Ч%}:з %{Ч%}:д %{Ч%}:с
  %{и%}:и %{и%}:й %{и%}:я %{и%}:е %{и%}:ё %{и%}:ю
  %{Q%}:ӄ %{Q%}:ӽ %{Q%}:ӻ
- %{х%}:х %{х%}:ғ
  %{ʼ%}:ʼ %{ʼ%}:0
+ %{ӈ%}:0
  ;
 
 Sets
@@ -110,8 +110,11 @@ Rules
 
 
 ! For иф
-"Remove /f/ before another stem"
+"Remove ф before another stem"
 %{f%}:0 <=> _ %>: ;
+
+!"Keep ф elsewhere"
+!%{f%}:ф <=> _ \%>: ;
 
 ! Iotating
 "Set %{и%} to ю before у"
@@ -167,9 +170,6 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 "Voice /f/ before sonorant and vowels"
 %{ф%}:в <=> :Vowel (%>:) (:0) _ (%>:) (:0) [:Sonorant | :Vowel] ;
 
-"Voice /x/ before class C"
-%{х%}:ғ <=> _ (%>:) :C ;
-
 
 ! For vocative case
 "Lengthen preceding vowel"
@@ -186,17 +186,17 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 %{G%}:ғ <=> [ :B | :Vowel ] (ь:) (%>:) (:0) _ ;
 
 "Set /G/ to <г> after sonorants and in the word нивх"
-%{G%}:г <=> [ :Sonorant | %{х%}: ] (%>:) (:0) _ ;
+%{G%}:г <=> [ :Sonorant | %{ӈ%}:0 ] (%>:) (:0) _ ;
 
 "Set /G/ to <к> after voiceless fricatives"
 %{G%}:к <=> :A1a (: ̌) (%>:) (:0) _ ;
 
 ! For plurals
-"Set /Г/ to <ғ> after voiced stops"
-%{Г%}:ғ <=> :C (ь:) (%>:) _ ;
+"Set /Г/ to <ғ> after stops"
+%{Г%}:ғ <=> [ :C | :B ] (ь:) (%>:) _ ;
 
-"Set /Г/ to <г> after sonorants and vowels and in the word нивх"
-%{Г%}:г <=> [ :Sonorant (ь:) | %{х%}: | :Vowel ] (%>:) _ ;
+"Set /Г/ to <г> after sonorants and vowels (including evanescent ӈ in Amur)"
+%{Г%}:г <=> [ :Sonorant (ь:) | %{ӈ%}:0 | :Vowel ] (%>:) _ ;
 
 "Set /Г/ to <к> after voiceless fricatives"
 %{Г%}:к <=> :A1a (%>:) _ ;

@@ -128,7 +128,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 ӈа:ӈа               # animal
 тыф:ты{ф}           # house         ! Amur
 ми:ми               # inside
-нивх:нив{х}         # person        ! Amur
+нивх:нивх{ӈ}        # person        ! Amur
 ваӄа:ваӄа           # box, trunk, chest
 сета:сета           # sugar
 ойдам:ойдам         # baby          ! Amur
@@ -309,6 +309,7 @@ LEXICON NounRoot-Amur   # SOME OF THESE MAY BE WORDS IN SAKH AS WELL. Those labe
 ки:ки               # footwear
 ӄʼоӻа:ӄ{ʼ}оӻа       # nature
 утку:утку           # husband
+нёни:нёни           # goose
 
 LEXICON NounRoot-Sakh
 ванивӈ:ванивӈ       # warrior, soldier
@@ -577,6 +578,7 @@ LEXICON NounRoot-Sakh
 чалу:чалу         # fog
 лах:лах           # cloud
 кʼлы:к{ʼ}лы       # sky
+кыкык:кыкык       # swan
 
 
 # ӷ ғ ӻ ӄ ӈ р̌ ӽ ӿ ʼ ў jjj ооо
@@ -686,7 +688,7 @@ IntPronStem [<prn><int>:]
 LEXICON PersPronRoot-Amur
 ни<p1><sg>:ни               # I
 чи<p2><sg>:чи               # you
-иф<p3><sg>:{и}{f}           # he, she, it
+иф<p3><sg>:иф               # he, she, it
 ньыӈ<p1><pl><excl>:ньыӈ     # they and I
 мер<p1><pl><incl>:мер       # y'all and I
 меги<p1><du>:меги           # you and I

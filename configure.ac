@@ -1,6 +1,6 @@
 AC_PREREQ(2.52)
 
-AC_INIT([Apertium niv], [0.1.0], [dcharte1@swarthmore.edu], [apertium-niv], [http://wiki.apertium.org/wiki/Apertium-niv])
+AC_INIT([Apertium niv], [0.1.0], [dcharte1@swarthmore.edu], [apertium-niv], [https://wiki.apertium.org/wiki/Apertium-niv])
 AM_INIT_AUTOMAKE
 
 AC_PROG_LN_S
